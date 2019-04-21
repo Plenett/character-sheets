@@ -3,22 +3,22 @@
     <div class="header">
         
         <div class="meta left">
-            <div class="metacontainer" style="width: 90%;">
+            <div class="metacontainer" style="width: 110%;">
                 <input type="text" spellcheck="false" name="attr_character_nom"/>
                 <div class="label"><span>Nom & Prénom</span></div>
             </div>
             
-            <div class="metacontainer" style="width: 70%;">
+            <div class="metacontainer" style="width: 90%;">
                 <input type="text" spellcheck="false" name="attr_character_clan"/>
                 <div class="label"><span>Clan</span></div>
             </div>
             
-            <div class="metacontainer" style="width: 50%;">
+            <div class="metacontainer" style="width: 70%;">
                 <input type="text" spellcheck="false" name="attr_character_genre"/>
                 <div class="label"><span>Genre</span></div>
             </div>
             
-            <div class="metacontainer" style="width: 30%;">
+            <div class="metacontainer" style="width: 50%;">
                 <input type="text" spellcheck="false" name="attr_character_age"/>
                 <div class="label"><span>Âge</span></div>
             </div>
@@ -52,7 +52,7 @@
             
             <div class="statuts">
                 
-                <div class="statut prestige">
+                <div class="statut vert">
                     <div class="label"><span>Prestiges</span></div>
                     <div class="sheet-dots">
                         <input type="radio" name="attr_prestige" value="0" checked="checked" /><span></span>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 
-                <div class="statut fatigue">
+                <div class="statut orange">
                     <div class="label"><span>Fatigues</span></div>
                     <div class="sheet-dots">
                         <input type="radio" name="attr_fatigue" value="0" checked="checked" /><span></span>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 
-                <div class="statut blessure">
+                <div class="statut rouge">
                     <div class="label"><span>Blessures</span></div>
                     <div class="sheet-dots">
                         <input type="radio" name="attr_blessure" value="0" checked="checked" /><span></span>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 
-                <div class="statut surmenage">
+                <div class="statut bleu">
                     <div class="label"><span>Surmenages</span></div>
                     <div class="sheet-dots">
                         <input type="radio" name="attr_surmenage" value="0" checked="checked" /><span></span>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 
-                <div class="statut prestige">
+                <div class="statut rose">
                     <div class="label"><span>Handicaps</span></div>
                     <div class="sheet-dots">
                         <input type="radio" name="attr_handicap" value="0" checked="checked" /><span></span>
@@ -106,22 +106,22 @@
         </div>
         
         <div class="meta right">
-            <div class="metacontainer" style="width: 90%;">
+            <div class="metacontainer" style="width: 110%;">
                 <input type="text" spellcheck="false" name="attr_character_raciale"/>
                 <div class="label"><span>Aptitude Raciale</span></div>
             </div>
             
-            <div class="metacontainer" style="width: 70%;">
+            <div class="metacontainer" style="width: 90%;">
                 <input type="text" spellcheck="false" name="attr_character_race"/>
                 <div class="label"><span>Race</span></div>
             </div>
             
-            <div class="metacontainer" style="width: 50%;">
+            <div class="metacontainer" style="width: 70%;">
                 <input type="text" spellcheck="false" name="attr_character_taille"/>
                 <div class="label"><span>Taille</span></div>
             </div>
             
-            <div class="metacontainer"  style="width: 30%;">
+            <div class="metacontainer"  style="width: 50%;">
                 <input type="text" spellcheck="false" name="attr_character_poids"/>
                 <div class="label"><span>Poids</span></div>
             </div>
@@ -132,7 +132,7 @@
     <div class="body">
         
         <div class="attributs">
-            <div class="header"><span>Attributs & Compétences</span></div>
+            <div class="header"><span>ATTRIBTUTS & COMPÉTENCES</span></div>
             
             
             <div class="col col1">
@@ -154,7 +154,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Pugilat</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Force-Pugilat.\n/roll 1t[@{force}] + 1t[@{pugilat}] + 1t[?{Bonus|0}]"><span>Pugilat</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_pugilat" value="0" checked="checked" /><span></span>
@@ -168,7 +168,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Armes Mêlée</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Force-Mêlée.\n/roll 1t[@{force}] + 1t[@{melee}] + 1t[?{Bonus|0}]"><span>Armes Mêlée</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_melee" value="0" checked="checked" /><span></span>
@@ -182,7 +182,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Musculature</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Force-Musculature.\n/roll 1t[@{force}] + 1t[@{musculature}] + 1t[?{Bonus|0}]"><span>Musculature</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_musculature" value="0" checked="checked" /><span></span>
@@ -214,7 +214,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Armes Dist.</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Perception-Distance.\n/roll 1t[@{perception}] + 1t[@{distance}] + 1t[?{Bonus|0}]"><span>Armes Dist.</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_distance" value="0" checked="checked" /><span></span>
@@ -228,21 +228,21 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Vigilence</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Perception-Vigilance.\n/roll 1t[@{perception}] + 1t[@{vigilance}] + 1t[?{Bonus|0}]"><span>Vigilance</span></button>
                             </div>
                             <div class="sheet-dots">
-                                <input type="radio" name="attr_vigilence" value="0" checked="checked" /><span></span>
-                                <input type="radio" name="attr_vigilence" value="1" /><span></span>
-                                <input type="radio" name="attr_vigilence" value="2" /><span></span>
-                                <input type="radio" name="attr_vigilence" value="3" /><span></span>
-                                <input type="radio" name="attr_vigilence" value="4" /><span></span>
-                                <input type="radio" name="attr_vigilence" value="5" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="1" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="2" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="3" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="4" /><span></span>
+                                <input type="radio" name="attr_vigilance" value="5" /><span></span>
                             </div>
                         </div>
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Acuité</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Perception-Acuité.\n/roll 1t[@{perception}] + 1t[@{acuite}] + 1t[?{Bonus|0}]"><span>Acuité</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_acuite" value="0" checked="checked" /><span></span>
@@ -274,7 +274,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Culture</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Intellect-Culture.\n/roll 1t[@{intellect}] + 1t[@{culture}] + 1t[?{Bonus|0}]"><span>Culture</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_culture" value="0" checked="checked" /><span></span>
@@ -288,7 +288,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Linguistique</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Intellect-Linguistique.\n/roll 1t[@{intellect}] + 1t[@{linguistique}] + 1t[?{Bonus|0}]"><span>Linguistique</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_linguistique" value="0" checked="checked" /><span></span>
@@ -302,7 +302,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Réflexions</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Intellect-Réflexions.\n/roll 1t[@{intellect}] + 1t[@{reflexion}] + 1t[?{Bonus|0}]"><span>Réflexions</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_reflexion" value="0" checked="checked" /><span></span>
@@ -334,7 +334,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Néfaste</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Magie-Néfaste.\n/roll 1t[@{magie}] + 1t[@{nefaste}] + 1t[?{Bonus|0}]"><span>Néfaste</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_nefaste" value="0" checked="checked" /><span></span>
@@ -348,7 +348,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Bénéfique</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Magie-Bénéfique.\n/roll 1t[@{magie}] + 1t[@{benefique}] + 1t[?{Bonus|0}]"><span>Bénéfique</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_benefique" value="0" checked="checked" /><span></span>
@@ -362,7 +362,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Contrôle</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Magie-Contrôle.\n/roll 1t[@{magie}] + 1t[@{controle}] + 1t[?{Bonus|0}]"><span>Contrôle</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_controle" value="0" checked="checked" /><span></span>
@@ -397,7 +397,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Parade</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Résistance-Parade.\n/roll 1t[@{resistance}] + 1t[@{parade}] + 1t[?{Bonus|0}]"><span>Parade</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_parade" value="0" checked="checked" /><span></span>
@@ -411,7 +411,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Bouclier</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Résistance-Bouclier.\n/roll 1t[@{resistance}] + 1t[@{bouclier}] + 1t[?{Bonus|0}]"><span>Bouclier</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_bouclier" value="0" checked="checked" /><span></span>
@@ -425,7 +425,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Constitution</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Résistance-Constitution.\n/roll 1t[@{resistance}] + 1t[@{constitution}] + 1t[?{Bonus|0}]"><span>Constitution</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_constitution" value="0" checked="checked" /><span></span>
@@ -457,7 +457,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Esquive</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Agilité-Esquive.\n/roll 1t[@{agilite}] + 1t[@{esquive}] + 1t[?{Bonus|0}]"><span>Esquive</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_esquive" value="0" checked="checked" /><span></span>
@@ -471,7 +471,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Vivacité</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Agilité-Vivacité.\n/roll 1t[@{agilite}] + 1t[@{vivacite}] + 1t[?{Bonus|0}]"><span>Vivacité</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_vivacite" value="0" checked="checked" /><span></span>
@@ -485,7 +485,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Adresse</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Agilité-Adresse.\n/roll 1t[@{agilite}] + 1t[@{adresse}] + 1t[?{Bonus|0}]"><span>Adresse</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_adresse" value="0" checked="checked" /><span></span>
@@ -517,7 +517,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Finesse</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Savoir Faire-Finesse.\n/roll 1t[@{savoir}] + 1t[@{finesse}] + 1t[?{Bonus|0}]"><span>Finesse</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_finesse" value="0" checked="checked" /><span></span>
@@ -531,7 +531,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Rudesse</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Savoir Faire-Rudesse.\n/roll 1t[@{savoir}] + 1t[@{rudesse}] + 1t[?{Bonus|0}]"><span>Rudesse</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_rudesse" value="0" checked="checked" /><span></span>
@@ -545,7 +545,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Survie</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Savoir Faire-Survie.\n/roll 1t[@{savoir}] + 1t[@{survie}] + 1t[?{Bonus|0}]"><span>Survie</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_survie" value="0" checked="checked" /><span></span>
@@ -580,7 +580,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Courage</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Volonté-Courage.\n/roll 1t[@{volonte}] + 1t[@{courage}] + 1t[?{Bonus|0}]"><span>Courage</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_courage" value="0" checked="checked" /><span></span>
@@ -594,7 +594,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Inflexibilité</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Volonté-Inflexibilité.\n/roll 1t[@{volonte}] + 1t[@{inflexibilite}] + 1t[?{Bonus|0}]"><span>Inflexibilité</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_inflexibilite" value="0" checked="checked" /><span></span>
@@ -608,7 +608,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Résilience</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Volonté-Resilience.\n/roll 1t[@{volonte}] + 1t[@{resilience}] + 1t[?{Bonus|0}]"><span>Résilience</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_resilience" value="0" checked="checked" /><span></span>
@@ -640,7 +640,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Doigté</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Discrétion-Doigté.\n/roll 1t[@{discretion}] + 1t[@{doigte}] + 1t[?{Bonus|0}]"><span>Doigté</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_doigte" value="0" checked="checked" /><span></span>
@@ -654,7 +654,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Camouflage</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Discrétion-Camouflage.\n/roll 1t[@{discretion}] + 1t[@{camouflage}] + 1t[?{Bonus|0}]"><span>Camouflage</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_camouflage" value="0" checked="checked" /><span></span>
@@ -668,7 +668,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Furtivité</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Discrétion-Furtivité.\n/roll 1t[@{discretion}] + 1t[@{furtivite}] + 1t[?{Bonus|0}]"><span>Furtivité</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_furtivite" value="0" checked="checked" /><span></span>
@@ -700,7 +700,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Sympathie</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Éloquence-Sympathie.\n/roll 1t[@{eloquence}] + 1t[@{sympathie}] + 1t[?{Bonus|0}]"><span>Sympathie</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_sympathie" value="0" checked="checked" /><span></span>
@@ -714,7 +714,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Antipathie</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Éloquence-Antipathie.\n/roll 1t[@{eloquence}] + 1t[@{antipathie}] + 1t[?{Bonus|0}]"><span>Antipathie</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_antipathie" value="0" checked="checked" /><span></span>
@@ -728,7 +728,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Réseaux</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Éloquence-Réseaux.\n/roll 1t[@{eloquence}] + 1t[@{reseaux}] + 1t[?{Bonus|0}]"><span>Réseaux</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_reseaux" value="0" checked="checked" /><span></span>
@@ -760,7 +760,7 @@
                     <div class="competences">
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Jeux</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Hasars-Jeux.\n/roll 1t[@{hasard}] + 1t[@{jeux}] + 1t[?{Bonus|0}]"><span>Jeux</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_jeux" value="0" checked="checked" /><span></span>
@@ -774,7 +774,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Fouille</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Hasars-Fouille.\n/roll 1t[@{hasard}] + 1t[@{fouille}] + 1t[?{Bonus|0}]"><span>Fouille</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_fouille" value="0" checked="checked" /><span></span>
@@ -788,7 +788,7 @@
                         <br/>
                         <div class="points">
                             <div class="label">
-                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Recherche</span></button>
+                                <button class="button" type="roll" name="roll_icon" value="/me Jet: Hasars-Recherche.\n/roll 1t[@{hasard}] + 1t[@{recherche}] + 1t[?{Bonus|0}]"><span>Recherche</span></button>
                             </div>
                             <div class="sheet-dots">
                                 <input type="radio" name="attr_recherche" value="0" checked="checked" /><span></span>
@@ -801,11 +801,648 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             
         </div>
         
+        <div class="equipements">
+            <div class="header"><span>ÉQUIPEMENTS</span></div>
+            
+            <div class="equipement left">
+                <div class="meta">
+                    <select class="selecter" name="attr_equipement1_type">
+                        <option></option>
+                        <option>G</option>
+                        <option>D</option>
+                        <option>GD</option>
+                        <option>U</option>
+                        <option>T</option>
+                        <option>R</option>
+                    </select>
+                    <input type="text" spellcheck="false" name="attr_equipement1_name"/>
+                
+                    <div class="handicap rose">
+                        <div class="label"><span>Handicap</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_equipement1_handicap" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_equipement1_handicap" value="1" /><span></span>
+                            <input type="radio" name="attr_equipement1_handicap" value="2" /><span></span>
+                            <input type="radio" name="attr_equipement1_handicap" value="3" /><span></span>
+                            <input type="radio" name="attr_equipement1_handicap" value="4" /><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bonus vert">
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement1_bonus1_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement1_bonus1" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus1" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus1" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus1" value="3" /><span></span>
+                    </div>
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement1_bonus2_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement1_bonus2" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus2" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus2" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement1_bonus2" value="3" /><span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipement right">
+                <div class="meta">
+                    <select class="selecter" name="attr_equipement2_type">
+                        <option></option>
+                        <option>G</option>
+                        <option>D</option>
+                        <option>GD</option>
+                        <option>U</option>
+                        <option>T</option>
+                        <option>R</option>
+                    </select>
+                    <input type="text" spellcheck="false" name="attr_equipement2_name"/>
+                
+                    <div class="handicap rose">
+                        <div class="label"><span>Handicap</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_equipement2_handicap" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_equipement2_handicap" value="1" /><span></span>
+                            <input type="radio" name="attr_equipement2_handicap" value="2" /><span></span>
+                            <input type="radio" name="attr_equipement2_handicap" value="3" /><span></span>
+                            <input type="radio" name="attr_equipement2_handicap" value="4" /><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bonus vert">
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement2_bonus1_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement2_bonus1" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus1" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus1" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus1" value="3" /><span></span>
+                    </div>
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement2_bonus2_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement2_bonus2" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus2" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus2" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement2_bonus2" value="3" /><span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipement left">
+                <div class="meta">
+                    <select class="selecter" name="attr_equipement3_type">
+                        <option></option>
+                        <option>G</option>
+                        <option>D</option>
+                        <option>GD</option>
+                        <option>U</option>
+                        <option>T</option>
+                        <option>R</option>
+                    </select>
+                    <input type="text" spellcheck="false" name="attr_equipement3_name"/>
+                
+                    <div class="handicap rose">
+                        <div class="label"><span>Handicap</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_equipement3_handicap" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_equipement3_handicap" value="1" /><span></span>
+                            <input type="radio" name="attr_equipement3_handicap" value="2" /><span></span>
+                            <input type="radio" name="attr_equipement3_handicap" value="3" /><span></span>
+                            <input type="radio" name="attr_equipement3_handicap" value="4" /><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bonus vert">
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement3_bonus1_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement3_bonus1" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus1" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus1" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus1" value="3" /><span></span>
+                    </div>
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement3_bonus2_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement3_bonus2" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus2" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus2" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement3_bonus2" value="3" /><span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="equipement right">
+                <div class="meta">
+                    <select class="selecter" name="attr_equipement4_type">
+                        <option></option>
+                        <option>G</option>
+                        <option>D</option>
+                        <option>GD</option>
+                        <option>U</option>
+                        <option>T</option>
+                        <option>R</option>
+                    </select>
+                    <input type="text" spellcheck="false" name="attr_equipement4_name"/>
+                
+                    <div class="handicap rose">
+                        <div class="label"><span>Handicap</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_equipement4_handicap" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_equipement4_handicap" value="1" /><span></span>
+                            <input type="radio" name="attr_equipement4_handicap" value="2" /><span></span>
+                            <input type="radio" name="attr_equipement4_handicap" value="3" /><span></span>
+                            <input type="radio" name="attr_equipement4_handicap" value="4" /><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bonus vert">
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement4_bonus1_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement4_bonus1" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus1" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus1" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus1" value="3" /><span></span>
+                    </div>
+                    <div class="label"><span>Bonus</span></div>
+                    <select class="" name="attr_equipement4_bonus2_name">
+                        <option></option>
+                        <option>FOR</option>
+                        <option>RES</option>
+                        <option>VOL</option>
+                        <option>PER</option>
+                        <option>AGI</option>
+                        <option>DIS</option>
+                        <option>INT</option>
+                        <option>SAV</option>
+                        <option>ELO</option>
+                        <option>MAG</option>
+                        <option>HAS</option>
+                    </select>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_equipement4_bonus2" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus2" value="1" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus2" value="2" /><span></span>
+                        <input type="radio" name="attr_equipement4_bonus2" value="3" /><span></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
         
+        <div class="magies">
+            <div class="header"><span>SPÉCIALITÉS MAGIQUES</span></div>
+            
+            <div class="magie orange">
+                <div class="">
+                    <div class="label"><span>AIR</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_air" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_air" value="1" /><span></span>
+                        <input type="radio" name="attr_air" value="2" /><span></span>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="specialites">
+                    <div class="">
+                        <div class="label"><span>Souffle</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_souffle" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_souffle" value="1" /><span></span>
+                            <input type="radio" name="attr_souffle" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Foudre</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_foudre" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_foudre" value="1" /><span></span>
+                            <input type="radio" name="attr_foudre" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Nuages</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_nuage" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_nuage" value="1" /><span></span>
+                            <input type="radio" name="attr_nuage" value="2" /><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="magie rouge">
+                <div class="">
+                    <div class="label"><span>FEU</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_feu" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_feu" value="1" /><span></span>
+                        <input type="radio" name="attr_feu" value="2" /><span></span>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="specialites">
+                    <div class="">
+                        <div class="label"><span>Flammes</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_flamme" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_flamme" value="1" /><span></span>
+                            <input type="radio" name="attr_flamme" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Lumière</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_lumiere" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_lumiere" value="1" /><span></span>
+                            <input type="radio" name="attr_lumiere" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Cendres</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_cendres" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_cendres" value="1" /><span></span>
+                            <input type="radio" name="attr_cendres" value="2" /><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="magie vert">
+                <div class="">
+                    <div class="label"><span>TERRE</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_terre" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_terre" value="1" /><span></span>
+                        <input type="radio" name="attr_terre" value="2" /><span></span>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="specialites">
+                    <div class="">
+                        <div class="label"><span>Minéraux</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_mineraux" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_mineraux" value="1" /><span></span>
+                            <input type="radio" name="attr_mineraux" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Plantes</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_plantes" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_plantes" value="1" /><span></span>
+                            <input type="radio" name="attr_plantes" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Magma</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_magma" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_magma" value="1" /><span></span>
+                            <input type="radio" name="attr_magma" value="2" /><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="magie bleu">
+                <div class="">
+                    <div class="label"><span>EAU</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_eau" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_eau" value="1" /><span></span>
+                        <input type="radio" name="attr_eau" value="2" /><span></span>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="specialites">
+                    <div class="">
+                        <div class="label"><span>Liquide</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_liquide" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_liquide" value="1" /><span></span>
+                            <input type="radio" name="attr_liquide" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Glace</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_glace" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_glace" value="1" /><span></span>
+                            <input type="radio" name="attr_glace" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Coulée</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_coulee" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_coulee" value="1" /><span></span>
+                            <input type="radio" name="attr_coulee" value="2" /><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="magie violet">
+                <div class="">
+                    <div class="label"><span>OMBRE</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_ombre" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_ombre" value="1" /><span></span>
+                        <input type="radio" name="attr_ombre" value="2" /><span></span>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="specialites">
+                    <div class="">
+                        <div class="label"><span>Ténèbres</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_tenebres" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_tenebres" value="1" /><span></span>
+                            <input type="radio" name="attr_tenebres" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Nécrose</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_necrose" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_necrose" value="1" /><span></span>
+                            <input type="radio" name="attr_necrose" value="2" /><span></span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="">
+                        <div class="label"><span>Corruption</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_corruption" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_corruption" value="1" /><span></span>
+                            <input type="radio" name="attr_corruption" value="2" /><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="aptitudes">
+            <div class="header"><span>APTITUDES</span></div>
+            
+            <div class="aptitude left">
+                <select class="selecter" name="attr_aptitude1_type">
+                    <option></option>
+                    <option>M</option>
+                    <option>P</option>
+                    <option>H</option>
+                    <option>U</option>
+                </select>
+                <input type="text" class="azer" spellcheck="false" name="attr_aptitude1_name"/>
+            
+                <div class="puissance rose">
+                    <div class="label"><span>Puissance</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_aptitude1_puissance" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_aptitude1_puissance" value="1" /><span></span>
+                        <input type="radio" name="attr_aptitude1_puissance" value="2" /><span></span>
+                        <input type="radio" name="attr_aptitude1_puissance" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="text">
+                    <input type="text" spellcheck="false" name="attr_aptitude1_text"/>
+                </div>
+                
+            </div>
+            
+            <div class="aptitude right">
+                <select class="selecter" name="attr_aptitude2_type">
+                    <option></option>
+                    <option>M</option>
+                    <option>P</option>
+                    <option>H</option>
+                    <option>U</option>
+                </select>
+                <input type="text" class="azer" spellcheck="false" name="attr_aptitude2_name"/>
+            
+                <div class="puissance rose">
+                    <div class="label"><span>Puissance</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_aptitude2_puissance" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_aptitude2_puissance" value="1" /><span></span>
+                        <input type="radio" name="attr_aptitude2_puissance" value="2" /><span></span>
+                        <input type="radio" name="attr_aptitude2_puissance" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="text">
+                    <input type="text" spellcheck="false" name="attr_aptitude2_text"/>
+                </div>
+                
+            </div>
+            
+            <div class="aptitude left">
+                <select class="selecter" name="attr_aptitude3_type">
+                    <option></option>
+                    <option>M</option>
+                    <option>P</option>
+                    <option>H</option>
+                    <option>U</option>
+                </select>
+                <input type="text" class="azer" spellcheck="false" name="attr_aptitude3_name"/>
+            
+                <div class="puissance rose">
+                    <div class="label"><span>Puissance</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_aptitude3_puissance" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_aptitude3_puissance" value="1" /><span></span>
+                        <input type="radio" name="attr_aptitude3_puissance" value="2" /><span></span>
+                        <input type="radio" name="attr_aptitude3_puissance" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="text">
+                    <input type="text" spellcheck="false" name="attr_aptitude3_text"/>
+                </div>
+                
+            </div>
+            
+            <div class="aptitude right">
+                <select class="selecter" name="attr_aptitude4_type">
+                    <option></option>
+                    <option>M</option>
+                    <option>P</option>
+                    <option>H</option>
+                    <option>U</option>
+                </select>
+                <input type="text" class="azer" spellcheck="false" name="attr_aptitude4_name"/>
+            
+                <div class="puissance rose">
+                    <div class="label"><span>Puissance</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_aptitude4_puissance" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_aptitude4_puissance" value="1" /><span></span>
+                        <input type="radio" name="attr_aptitude4_puissance" value="2" /><span></span>
+                        <input type="radio" name="attr_aptitude4_puissance" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="text">
+                    <input type="text" spellcheck="false" name="attr_aptitude4_text"/>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="histoire">
+            <div class="header"><span>HISTOIRE</span></div>
+            <textarea name="attr_histoire"></textarea>
+        </div>
+        
+        <div class="mental">
+            <div class="header"><span>DESCRIPTION MENTALE</span></div>
+            <textarea name="attr_mental"></textarea>
+        </div>
+        
+        <div class="physique">
+            <div class="header"><span>DESCRIPTION PHYSIQUE</span></div>
+            <textarea name="attr_physique"></textarea>
+        </div>
+
+        <div class="equipement-bis">
+            <div class="header"><span>EQUIPEMENT</span></div>
+            <textarea name="attr_equipement"></textarea>
+        </div>
+        
+        <div class="inventaire">
+            <div class="header"><span>INVENTAIRE</span></div>
+            <textarea name="attr_inventaire"></textarea>
+        </div>
         
     </div>
     

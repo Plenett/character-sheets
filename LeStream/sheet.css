@@ -10,6 +10,20 @@
     margin-left: 3px;
 }
 
+select {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    color: black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
 input {
     background: none;
     border: none;
@@ -58,7 +72,6 @@ button:hover {
 /* Header */
 .sheet-meta {
     display: inline-block;
-    height: 200px;
     width: 200px;
     vertical-align: top;
 }
@@ -187,53 +200,63 @@ button:hover {
     width: 20px;
 }
 
-.sheet-prestige .sheet-dots input[type="radio"]:not([value="0"]) + span {
+.sheet-vert .sheet-dots input[type="radio"]:not([value="0"]) + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-prestige-checked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-prestige .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+.sheet-vert .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-prestige-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-fatigue .sheet-dots input[type="radio"]:not([value="0"]) + span {
+.sheet-orange .sheet-dots input[type="radio"]:not([value="0"]) + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-fatigue-checked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-fatigue .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+.sheet-orange .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-fatigue-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-blessure .sheet-dots input[type="radio"]:not([value="0"]) + span {
+.sheet-rouge .sheet-dots input[type="radio"]:not([value="0"]) + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-blessure-checked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-blessure .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+.sheet-rouge .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-blessure-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-surmenage .sheet-dots input[type="radio"]:not([value="0"]) + span {
+.sheet-bleu .sheet-dots input[type="radio"]:not([value="0"]) + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-surmenage-checked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-surmenage .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+.sheet-bleu .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-surmenage-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-handicap .sheet-dots input[type="radio"]:not([value="0"]) + span {
+.sheet-rose .sheet-dots input[type="radio"]:not([value="0"]) + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-handicap-checked.PNG") no-repeat;
     background-size:100%;
 }
 
-.sheet-handicap .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+.sheet-rose .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-handicap-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-violet .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-5-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-violet .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-5-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
@@ -408,4 +431,291 @@ button:hover {
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="5"] + span {
     background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-5-unchecked.PNG") no-repeat;
     background-size:100%;
+}
+
+/* Équipements */
+.sheet-equipements .sheet-right {
+    border-left: solid 2px black;
+}
+
+.sheet-equipement {
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+.sheet-equipement .sheet-meta {
+    display: inline-block;
+    width: 60%;
+}
+
+.sheet-meta .sheet-selecter {
+    background: #DEB887;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 30px;
+    box-shadow: 0pt 0pt 1pt 0.5pt black;
+}
+
+.sheet-meta input[type=text] {
+    display: inline-block;
+    text-align: left;
+    margin-right: -10px;
+    border-bottom: solid 1px black;
+    width: 74%;
+    font-size: 20px;
+}
+
+.sheet-handicap span {
+    display: inline-block;
+    text-align: justify;
+}
+
+.sheet-handicap .sheet-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 30%;
+}
+
+.sheet-handicap .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-handicap .sheet-dots input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-handicap .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-handicap .sheet-dots:hover input[type="radio"][value="0"] + span:before {
+    opacity: 1;
+}
+
+.sheet-handicap .sheet-dots input[type="radio"] + span {
+    height: 15px;
+    width: 15px;
+}
+
+.sheet-bonus {
+    width: 39%;
+    margin-top: 25px;
+    float: right;
+}
+
+.sheet-bonus select {
+    font-size: 12px;
+    width: 3em;
+    border-bottom: solid 1px black;
+}
+
+.sheet-bonus span {
+    display: inline-block;
+    text-align: justify;
+}
+
+.sheet-bonus .sheet-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sheet-bonus .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-bonus .sheet-dots input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-bonus .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-bonus .sheet-dots:hover input[type="radio"][value="0"] + span:before {
+    opacity: 1;
+}
+
+.sheet-bonus .sheet-dots input[type="radio"] + span {
+    height: 15px;
+    width: 15px;
+}
+
+/* Magies */
+.sheet-magie {
+    width: 18%;
+    margin: 6px;
+    display: inline-block;
+    line-height: 13px;
+}
+
+.sheet-specialites {
+    margin-left: 15px;
+    padding-left: 2px;
+    border-left: 1px solid black;
+}
+
+.sheet-magie span {
+    display: inline-block;
+    text-align: justify;
+}
+
+.sheet-magie .sheet-label {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.sheet-specialites .sheet-label {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.sheet-magie .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-magie .sheet-dots input[type='radio'] {
+    height: 20px;
+    width: 20px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-specialites .sheet-dots input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-magie .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-magie .sheet-dots:hover input[type="radio"][value="0"] + span:before {
+    opacity: 1;
+}
+
+.sheet-specialites .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-magie .sheet-dots input[type="radio"] + span {
+    height: 20px;
+    width: 20px;
+}
+
+.sheet-specialites .sheet-dots input[type="radio"] + span {
+    height: 15px;
+    width: 15px;
+    margin: 1.5px;
+}
+
+/* Aptitudes */
+.sheet-aptitudes .sheet-right {
+    border-left: solid 2px black;
+}
+
+.sheet-aptitude {
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+.sheet-aptitude .sheet-selecter {
+    background: #80bfff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 30px;
+    box-shadow: 0pt 0pt 1pt 0.5pt black;
+}
+
+.sheet-aptitude input[type=text] {
+    display: inline-block;
+    text-align: left;
+    border-bottom: solid 1px black;
+    width: 40%;
+    font-size: 20px;
+}
+
+.sheet-text input[type=text] {
+    width: 90%;
+    margin-top: -20px;
+    margin-left: 10px;
+    font-size: 12px;
+    border-left: solid 1px black;
+    padding-left: 5px;
+}
+
+.sheet-puissance {
+    display: inline-block;
+}
+
+.sheet-puissance span {
+    display: inline-block;
+}
+
+.sheet-puissance .sheet-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sheet-puissance .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-puissance .sheet-dots input[type='radio'] {
+    height: 15px;
+    width: 15px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-puissance .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-puissance .sheet-dots:hover input[type="radio"][value="0"] + span:before {
+    opacity: 1;
+}
+
+.sheet-puissance .sheet-dots input[type="radio"] + span {
+    height: 15px;
+    width: 15px;
 }
