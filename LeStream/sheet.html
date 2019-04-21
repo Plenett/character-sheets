@@ -1,0 +1,812 @@
+<div class="container">
+    
+    <div class="header">
+        
+        <div class="meta left">
+            <div class="metacontainer" style="width: 90%;">
+                <input type="text" spellcheck="false" name="attr_character_nom"/>
+                <div class="label"><span>Nom & Prénom</span></div>
+            </div>
+            
+            <div class="metacontainer" style="width: 70%;">
+                <input type="text" spellcheck="false" name="attr_character_clan"/>
+                <div class="label"><span>Clan</span></div>
+            </div>
+            
+            <div class="metacontainer" style="width: 50%;">
+                <input type="text" spellcheck="false" name="attr_character_genre"/>
+                <div class="label"><span>Genre</span></div>
+            </div>
+            
+            <div class="metacontainer" style="width: 30%;">
+                <input type="text" spellcheck="false" name="attr_character_age"/>
+                <div class="label"><span>Âge</span></div>
+            </div>
+        </div>
+        
+        <div class="info center">
+            
+            <div class="reputations">
+                <div class="reputation left">
+                    <div class="label"><span>Prestance</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_prestance">
+                    <div class="label"><span>Criminels</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_criminel">
+                    <div class="label"><span>Marchands</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_marchand">
+                    <div class="label"><span>Peuple</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_peuple">
+                </div>
+                
+                <div class="reputation right">
+                    <div class="label"><span>Savants</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_savant">
+                    <div class="label"><span>Autorités</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_autorite">
+                    <div class="label"><span>Notables</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_notable">
+                    <div class="label"><span>Dirigeants</span></div>
+                    <input type="range" class="slider" min="0" max="100" value="50" name="attr_reputation_dirigeant">
+                </div>
+            </div>
+            
+            <div class="statuts">
+                
+                <div class="statut prestige">
+                    <div class="label"><span>Prestiges</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_prestige" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_prestige" value="1" /><span></span>
+                        <input type="radio" name="attr_prestige" value="2" /><span></span>
+                        <input type="radio" name="attr_prestige" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="statut fatigue">
+                    <div class="label"><span>Fatigues</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_fatigue" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_fatigue" value="1" /><span></span>
+                        <input type="radio" name="attr_fatigue" value="2" /><span></span>
+                        <input type="radio" name="attr_fatigue" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="statut blessure">
+                    <div class="label"><span>Blessures</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_blessure" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_blessure" value="1" /><span></span>
+                        <input type="radio" name="attr_blessure" value="2" /><span></span>
+                        <input type="radio" name="attr_blessure" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="statut surmenage">
+                    <div class="label"><span>Surmenages</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_surmenage" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_surmenage" value="1" /><span></span>
+                        <input type="radio" name="attr_surmenage" value="2" /><span></span>
+                        <input type="radio" name="attr_surmenage" value="3" /><span></span>
+                    </div>
+                </div>
+                
+                <div class="statut prestige">
+                    <div class="label"><span>Handicaps</span></div>
+                    <div class="sheet-dots">
+                        <input type="radio" name="attr_handicap" value="0" checked="checked" /><span></span>
+                        <input type="radio" name="attr_handicap" value="1" /><span></span>
+                        <input type="radio" name="attr_handicap" value="2" /><span></span>
+                        <input type="radio" name="attr_handicap" value="3" /><span></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="meta right">
+            <div class="metacontainer" style="width: 90%;">
+                <input type="text" spellcheck="false" name="attr_character_raciale"/>
+                <div class="label"><span>Aptitude Raciale</span></div>
+            </div>
+            
+            <div class="metacontainer" style="width: 70%;">
+                <input type="text" spellcheck="false" name="attr_character_race"/>
+                <div class="label"><span>Race</span></div>
+            </div>
+            
+            <div class="metacontainer" style="width: 50%;">
+                <input type="text" spellcheck="false" name="attr_character_taille"/>
+                <div class="label"><span>Taille</span></div>
+            </div>
+            
+            <div class="metacontainer"  style="width: 30%;">
+                <input type="text" spellcheck="false" name="attr_character_poids"/>
+                <div class="label"><span>Poids</span></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="body">
+        
+        <div class="attributs">
+            <div class="header"><span>Attributs & Compétences</span></div>
+            
+            
+            <div class="col col1">
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>FORCE</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_force" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_force" value="1" /><span></span>
+                            <input type="radio" name="attr_force" value="2" /><span></span>
+                            <input type="radio" name="attr_force" value="3" /><span></span>
+                            <input type="radio" name="attr_force" value="4" /><span></span>
+                            <input type="radio" name="attr_force" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Pugilat</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_pugilat" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_pugilat" value="1" /><span></span>
+                                <input type="radio" name="attr_pugilat" value="2" /><span></span>
+                                <input type="radio" name="attr_pugilat" value="3" /><span></span>
+                                <input type="radio" name="attr_pugilat" value="4" /><span></span>
+                                <input type="radio" name="attr_pugilat" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Armes Mêlée</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_melee" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_melee" value="1" /><span></span>
+                                <input type="radio" name="attr_melee" value="2" /><span></span>
+                                <input type="radio" name="attr_melee" value="3" /><span></span>
+                                <input type="radio" name="attr_melee" value="4" /><span></span>
+                                <input type="radio" name="attr_melee" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Musculature</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_musculature" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_musculature" value="1" /><span></span>
+                                <input type="radio" name="attr_musculature" value="2" /><span></span>
+                                <input type="radio" name="attr_musculature" value="3" /><span></span>
+                                <input type="radio" name="attr_musculature" value="4" /><span></span>
+                                <input type="radio" name="attr_musculature" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>PERCEPTION</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_perception" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_perception" value="1" /><span></span>
+                            <input type="radio" name="attr_perception" value="2" /><span></span>
+                            <input type="radio" name="attr_perception" value="3" /><span></span>
+                            <input type="radio" name="attr_perception" value="4" /><span></span>
+                            <input type="radio" name="attr_perception" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Armes Dist.</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_distance" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_distance" value="1" /><span></span>
+                                <input type="radio" name="attr_distance" value="2" /><span></span>
+                                <input type="radio" name="attr_distance" value="3" /><span></span>
+                                <input type="radio" name="attr_distance" value="4" /><span></span>
+                                <input type="radio" name="attr_distance" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Vigilence</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_vigilence" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_vigilence" value="1" /><span></span>
+                                <input type="radio" name="attr_vigilence" value="2" /><span></span>
+                                <input type="radio" name="attr_vigilence" value="3" /><span></span>
+                                <input type="radio" name="attr_vigilence" value="4" /><span></span>
+                                <input type="radio" name="attr_vigilence" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Acuité</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_acuite" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_acuite" value="1" /><span></span>
+                                <input type="radio" name="attr_acuite" value="2" /><span></span>
+                                <input type="radio" name="attr_acuite" value="3" /><span></span>
+                                <input type="radio" name="attr_acuite" value="4" /><span></span>
+                                <input type="radio" name="attr_acuite" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>INTELLECT</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_intellect" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_intellect" value="1" /><span></span>
+                            <input type="radio" name="attr_intellect" value="2" /><span></span>
+                            <input type="radio" name="attr_intellect" value="3" /><span></span>
+                            <input type="radio" name="attr_intellect" value="4" /><span></span>
+                            <input type="radio" name="attr_intellect" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Culture</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_culture" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_culture" value="1" /><span></span>
+                                <input type="radio" name="attr_culture" value="2" /><span></span>
+                                <input type="radio" name="attr_culture" value="3" /><span></span>
+                                <input type="radio" name="attr_culture" value="4" /><span></span>
+                                <input type="radio" name="attr_culture" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Linguistique</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_linguistique" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_linguistique" value="1" /><span></span>
+                                <input type="radio" name="attr_linguistique" value="2" /><span></span>
+                                <input type="radio" name="attr_linguistique" value="3" /><span></span>
+                                <input type="radio" name="attr_linguistique" value="4" /><span></span>
+                                <input type="radio" name="attr_linguistique" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Réflexions</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_reflexion" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_reflexion" value="1" /><span></span>
+                                <input type="radio" name="attr_reflexion" value="2" /><span></span>
+                                <input type="radio" name="attr_reflexion" value="3" /><span></span>
+                                <input type="radio" name="attr_reflexion" value="4" /><span></span>
+                                <input type="radio" name="attr_reflexion" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>MAGIE</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_magie" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_magie" value="1" /><span></span>
+                            <input type="radio" name="attr_magie" value="2" /><span></span>
+                            <input type="radio" name="attr_magie" value="3" /><span></span>
+                            <input type="radio" name="attr_magie" value="4" /><span></span>
+                            <input type="radio" name="attr_magie" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Néfaste</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_nefaste" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_nefaste" value="1" /><span></span>
+                                <input type="radio" name="attr_nefaste" value="2" /><span></span>
+                                <input type="radio" name="attr_nefaste" value="3" /><span></span>
+                                <input type="radio" name="attr_nefaste" value="4" /><span></span>
+                                <input type="radio" name="attr_nefaste" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Bénéfique</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_benefique" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_benefique" value="1" /><span></span>
+                                <input type="radio" name="attr_benefique" value="2" /><span></span>
+                                <input type="radio" name="attr_benefique" value="3" /><span></span>
+                                <input type="radio" name="attr_benefique" value="4" /><span></span>
+                                <input type="radio" name="attr_benefique" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Contrôle</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_controle" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_controle" value="1" /><span></span>
+                                <input type="radio" name="attr_controle" value="2" /><span></span>
+                                <input type="radio" name="attr_controle" value="3" /><span></span>
+                                <input type="radio" name="attr_controle" value="4" /><span></span>
+                                <input type="radio" name="attr_controle" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="col col2">
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>RÉSISTANCE</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_resistance" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_resistance" value="1" /><span></span>
+                            <input type="radio" name="attr_resistance" value="2" /><span></span>
+                            <input type="radio" name="attr_resistance" value="3" /><span></span>
+                            <input type="radio" name="attr_resistance" value="4" /><span></span>
+                            <input type="radio" name="attr_resistance" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Parade</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_parade" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_parade" value="1" /><span></span>
+                                <input type="radio" name="attr_parade" value="2" /><span></span>
+                                <input type="radio" name="attr_parade" value="3" /><span></span>
+                                <input type="radio" name="attr_parade" value="4" /><span></span>
+                                <input type="radio" name="attr_parade" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Bouclier</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_bouclier" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_bouclier" value="1" /><span></span>
+                                <input type="radio" name="attr_bouclier" value="2" /><span></span>
+                                <input type="radio" name="attr_bouclier" value="3" /><span></span>
+                                <input type="radio" name="attr_bouclier" value="4" /><span></span>
+                                <input type="radio" name="attr_bouclier" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Constitution</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_constitution" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_constitution" value="1" /><span></span>
+                                <input type="radio" name="attr_constitution" value="2" /><span></span>
+                                <input type="radio" name="attr_constitution" value="3" /><span></span>
+                                <input type="radio" name="attr_constitution" value="4" /><span></span>
+                                <input type="radio" name="attr_constitution" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>AGILITÉ</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_agilite" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_agilite" value="1" /><span></span>
+                            <input type="radio" name="attr_agilite" value="2" /><span></span>
+                            <input type="radio" name="attr_agilite" value="3" /><span></span>
+                            <input type="radio" name="attr_agilite" value="4" /><span></span>
+                            <input type="radio" name="attr_agilite" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Esquive</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_esquive" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_esquive" value="1" /><span></span>
+                                <input type="radio" name="attr_esquive" value="2" /><span></span>
+                                <input type="radio" name="attr_esquive" value="3" /><span></span>
+                                <input type="radio" name="attr_esquive" value="4" /><span></span>
+                                <input type="radio" name="attr_esquive" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Vivacité</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_vivacite" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_vivacite" value="1" /><span></span>
+                                <input type="radio" name="attr_vivacite" value="2" /><span></span>
+                                <input type="radio" name="attr_vivacite" value="3" /><span></span>
+                                <input type="radio" name="attr_vivacite" value="4" /><span></span>
+                                <input type="radio" name="attr_vivacite" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Adresse</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_adresse" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_adresse" value="1" /><span></span>
+                                <input type="radio" name="attr_adresse" value="2" /><span></span>
+                                <input type="radio" name="attr_adresse" value="3" /><span></span>
+                                <input type="radio" name="attr_adresse" value="4" /><span></span>
+                                <input type="radio" name="attr_adresse" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>SAVOIR-FAIRE</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_savoir" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_savoir" value="1" /><span></span>
+                            <input type="radio" name="attr_savoir" value="2" /><span></span>
+                            <input type="radio" name="attr_savoir" value="3" /><span></span>
+                            <input type="radio" name="attr_savoir" value="4" /><span></span>
+                            <input type="radio" name="attr_savoir" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Finesse</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_finesse" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_finesse" value="1" /><span></span>
+                                <input type="radio" name="attr_finesse" value="2" /><span></span>
+                                <input type="radio" name="attr_finesse" value="3" /><span></span>
+                                <input type="radio" name="attr_finesse" value="4" /><span></span>
+                                <input type="radio" name="attr_finesse" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Rudesse</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_rudesse" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_rudesse" value="1" /><span></span>
+                                <input type="radio" name="attr_rudesse" value="2" /><span></span>
+                                <input type="radio" name="attr_rudesse" value="3" /><span></span>
+                                <input type="radio" name="attr_rudesse" value="4" /><span></span>
+                                <input type="radio" name="attr_rudesse" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Survie</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_survie" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_survie" value="1" /><span></span>
+                                <input type="radio" name="attr_survie" value="2" /><span></span>
+                                <input type="radio" name="attr_survie" value="3" /><span></span>
+                                <input type="radio" name="attr_survie" value="4" /><span></span>
+                                <input type="radio" name="attr_survie" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="col col3">
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>VOLONTÉ</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_volonte" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_volonte" value="1" /><span></span>
+                            <input type="radio" name="attr_volonte" value="2" /><span></span>
+                            <input type="radio" name="attr_volonte" value="3" /><span></span>
+                            <input type="radio" name="attr_volonte" value="4" /><span></span>
+                            <input type="radio" name="attr_volonte" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Courage</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_courage" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_courage" value="1" /><span></span>
+                                <input type="radio" name="attr_courage" value="2" /><span></span>
+                                <input type="radio" name="attr_courage" value="3" /><span></span>
+                                <input type="radio" name="attr_courage" value="4" /><span></span>
+                                <input type="radio" name="attr_courage" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Inflexibilité</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_inflexibilite" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_inflexibilite" value="1" /><span></span>
+                                <input type="radio" name="attr_inflexibilite" value="2" /><span></span>
+                                <input type="radio" name="attr_inflexibilite" value="3" /><span></span>
+                                <input type="radio" name="attr_inflexibilite" value="4" /><span></span>
+                                <input type="radio" name="attr_inflexibilite" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Résilience</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_resilience" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_resilience" value="1" /><span></span>
+                                <input type="radio" name="attr_resilience" value="2" /><span></span>
+                                <input type="radio" name="attr_resilience" value="3" /><span></span>
+                                <input type="radio" name="attr_resilience" value="4" /><span></span>
+                                <input type="radio" name="attr_resilience" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>DISCRÉTION</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_discretion" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_discretion" value="1" /><span></span>
+                            <input type="radio" name="attr_discretion" value="2" /><span></span>
+                            <input type="radio" name="attr_discretion" value="3" /><span></span>
+                            <input type="radio" name="attr_discretion" value="4" /><span></span>
+                            <input type="radio" name="attr_discretion" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Doigté</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_doigte" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_doigte" value="1" /><span></span>
+                                <input type="radio" name="attr_doigte" value="2" /><span></span>
+                                <input type="radio" name="attr_doigte" value="3" /><span></span>
+                                <input type="radio" name="attr_doigte" value="4" /><span></span>
+                                <input type="radio" name="attr_doigte" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Camouflage</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_camouflage" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_camouflage" value="1" /><span></span>
+                                <input type="radio" name="attr_camouflage" value="2" /><span></span>
+                                <input type="radio" name="attr_camouflage" value="3" /><span></span>
+                                <input type="radio" name="attr_camouflage" value="4" /><span></span>
+                                <input type="radio" name="attr_camouflage" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Furtivité</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_furtivite" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_furtivite" value="1" /><span></span>
+                                <input type="radio" name="attr_furtivite" value="2" /><span></span>
+                                <input type="radio" name="attr_furtivite" value="3" /><span></span>
+                                <input type="radio" name="attr_furtivite" value="4" /><span></span>
+                                <input type="radio" name="attr_furtivite" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>ÉLOQUENCE</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_eloquence" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_eloquence" value="1" /><span></span>
+                            <input type="radio" name="attr_eloquence" value="2" /><span></span>
+                            <input type="radio" name="attr_eloquence" value="3" /><span></span>
+                            <input type="radio" name="attr_eloquence" value="4" /><span></span>
+                            <input type="radio" name="attr_eloquence" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Sympathie</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_sympathie" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_sympathie" value="1" /><span></span>
+                                <input type="radio" name="attr_sympathie" value="2" /><span></span>
+                                <input type="radio" name="attr_sympathie" value="3" /><span></span>
+                                <input type="radio" name="attr_sympathie" value="4" /><span></span>
+                                <input type="radio" name="attr_sympathie" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Antipathie</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_antipathie" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_antipathie" value="1" /><span></span>
+                                <input type="radio" name="attr_antipathie" value="2" /><span></span>
+                                <input type="radio" name="attr_antipathie" value="3" /><span></span>
+                                <input type="radio" name="attr_antipathie" value="4" /><span></span>
+                                <input type="radio" name="attr_antipathie" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Réseaux</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_reseaux" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_reseaux" value="1" /><span></span>
+                                <input type="radio" name="attr_reseaux" value="2" /><span></span>
+                                <input type="radio" name="attr_reseaux" value="3" /><span></span>
+                                <input type="radio" name="attr_reseaux" value="4" /><span></span>
+                                <input type="radio" name="attr_reseaux" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="attribut">
+                    <div class="points">
+                        <div class="label"><span>HASARD</span></div>
+                        <div class="sheet-dots">
+                            <input type="radio" name="attr_hasard" value="0" checked="checked" /><span></span>
+                            <input type="radio" name="attr_hasard" value="1" /><span></span>
+                            <input type="radio" name="attr_hasard" value="2" /><span></span>
+                            <input type="radio" name="attr_hasard" value="3" /><span></span>
+                            <input type="radio" name="attr_hasard" value="4" /><span></span>
+                            <input type="radio" name="attr_hasard" value="5" /><span></span>
+                        </div>
+                    </div>
+                    
+                    <br/>
+                    
+                    <div class="competences">
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Jeux</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_jeux" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_jeux" value="1" /><span></span>
+                                <input type="radio" name="attr_jeux" value="2" /><span></span>
+                                <input type="radio" name="attr_jeux" value="3" /><span></span>
+                                <input type="radio" name="attr_jeux" value="4" /><span></span>
+                                <input type="radio" name="attr_jeux" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Fouille</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_fouille" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_fouille" value="1" /><span></span>
+                                <input type="radio" name="attr_fouille" value="2" /><span></span>
+                                <input type="radio" name="attr_fouille" value="3" /><span></span>
+                                <input type="radio" name="attr_fouille" value="4" /><span></span>
+                                <input type="radio" name="attr_fouille" value="5" /><span></span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="points">
+                            <div class="label">
+                                <button class="button" type="roll" name="roll_icon" value="1d100"><span>Recherche</span></button>
+                            </div>
+                            <div class="sheet-dots">
+                                <input type="radio" name="attr_recherche" value="0" checked="checked" /><span></span>
+                                <input type="radio" name="attr_recherche" value="1" /><span></span>
+                                <input type="radio" name="attr_recherche" value="2" /><span></span>
+                                <input type="radio" name="attr_recherche" value="3" /><span></span>
+                                <input type="radio" name="attr_recherche" value="4" /><span></span>
+                                <input type="radio" name="attr_recherche" value="5" /><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+</div>

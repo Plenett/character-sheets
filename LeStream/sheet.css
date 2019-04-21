@@ -1,0 +1,411 @@
+.sheet-container {
+    width: 800px;
+}
+
+.sheet-col1,
+.sheet-col2,
+.sheet-col3 {
+    width: 32%;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+input {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    width: 20px;
+    color: black;
+}
+
+button {
+    background-image: none;
+    background:none!important;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    border-bottom:1px solid #444;
+}
+
+.sheet-right {
+    float: right; 
+    clear: right;
+    text-align: right;
+}
+
+.sheet-center {
+    float: center; 
+    clear: center;
+    text-align: center;
+}
+
+.sheet-left {
+    float: left; 
+    clear: left;
+    text-align: left;
+}
+
+.sheet-right input {
+    text-align: right; 
+}
+
+/* Header */
+.sheet-meta {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    vertical-align: top;
+}
+
+.sheet-metacontainer {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.sheet-right .sheet-metacontainer {
+    float: right;
+    clear: both;
+}
+
+.sheet-metacontainer input {
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 14px;
+}
+
+.sheet-metacontainer span{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sheet-info {
+    display: inline-block;
+    height: 200px;
+    width: 400px;
+    vertical-align: top;
+}
+
+.sheet-info .sheet-header {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sheet-info .sheet-reputation {
+    width: 50%;
+    line-height: 15px;
+}
+
+.sheet-reputation .sheet-slider {
+    width: 90%;
+    height: 10px;
+    box-shadow: 0 0 1pt 0.5pt black;
+    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.sheet-right .sheet-slider {
+    direction: rtl;
+    float: right;
+    background: linear-gradient(0.25turn, #5fb55f, #fffd00, #e66465);
+}
+
+.sheet-left .sheet-slider {
+    float: left;
+    background: linear-gradient(0.25turn, #e66465, #fffd00, #5fb55f);
+}
+
+.sheet-reputation .sheet-slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.sheet-reputation .sheet-slider::-moz-range-thumb {
+  width: 5px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #696969; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.sheet-reputation .sheet-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sheet-statuts {
+    width: 140%;
+    margin-left: -20%;
+    margin-right: -10%;
+}
+
+.sheet-statut {
+    margin-top: 20px;
+    display: inline-block;
+    width: 19%;
+}
+
+.sheet-statut span {
+    display: inline-block;
+    text-align: justify;
+}
+
+.sheet-statut .sheet-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sheet-statut .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-statut .sheet-dots input[type='radio'] {
+    height: 20px;
+    width: 20px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-statut .sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    font-size: 20px;
+    text-align: center;
+    opacity: 1;
+}
+
+.sheet-statut .sheet-dots input[type="radio"] + span {
+    height: 20px;
+    width: 20px;
+}
+
+.sheet-prestige .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-prestige-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-prestige .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-prestige-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-fatigue .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-fatigue-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-fatigue .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-fatigue-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-blessure .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-blessure-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-blessure .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-blessure-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-surmenage .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-surmenage-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-surmenage .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-surmenage-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-handicap .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-handicap-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-handicap .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-handicap-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+/* Body */
+.sheet-body {
+    width: 100%;
+}
+
+.sheet-body .sheet-header {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sheet-body .sheet-header:before,
+.sheet-body .sheet-header:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.sheet-body .sheet-header:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.sheet-body .sheet-header:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/*Attributs & Compétences */
+.sheet-attribut {
+    width: 100%;
+    display: inline-block;
+    line-height: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.sheet-col2 .sheet-attribut {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.sheet-competences {
+    margin-left: 15px;
+    padding-left: 2px;
+    border-left: 1px solid black;
+}
+
+.sheet-attribut .sheet-label {
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.sheet-competences .sheet-label button {
+    background-image: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.sheet-points span {
+    display: inline-block;
+    text-align: justify;
+}
+
+.sheet-points .sheet-dots {
+    display: inline-block;
+    float: right;
+    top: 2px;
+    right: -2px;
+}
+
+.sheet-dots input[type="radio"][value="0"] + span:before {
+    content: "X";
+    text-align: center;
+    opacity: 0;
+}
+
+.sheet-attribut .sheet-dots input[type=radio][value="0"] + span:before {
+    font-size: 24px;
+}
+
+.sheet-competences .sheet-dots input[type=radio][value="0"] + span:before {
+    font-size: 17px;
+}
+
+.sheet-dots:hover input[type="radio"][value="0"] + span:before {
+    opacity: 1;
+}
+
+.sheet-attribut .sheet-dots input[type='radio'] {
+    height: 20px;
+    width: 20px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-attribut .sheet-dots input[type='radio'] {
+    height: 17px;
+    width: 17px;
+    opacity:0;
+    position:absolute;
+}
+
+.sheet-attribut .sheet-dots input[type="radio"] + span {
+    height: 20px;
+    width: 20px;
+}
+
+.sheet-competences .sheet-dots input[type="radio"] + span {
+    height: 17px;
+    width: 17px;
+    margin:1.5px;
+}
+
+.sheet-points .sheet-dots input[type="radio"][value="1"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-1-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type="radio"][value="2"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-2-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type="radio"][value="3"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-3-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type="radio"][value="4"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-4-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type="radio"][value="5"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-5-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="1"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-1-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="2"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-2-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="3"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-3-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="4"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-4-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="5"] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/LeStream/image/checkbox-5-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
