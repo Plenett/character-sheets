@@ -292,6 +292,10 @@ button:hover {
     text-align: center;
 }
 
+.sheet-col .sheet-header {
+    font-size: 17px;
+}
+
 .sheet-body .sheet-header:before,
 .sheet-body .sheet-header:after {
     background-color: #000;
@@ -301,6 +305,11 @@ button:hover {
     position: relative;
     vertical-align: middle;
     width: 50%;
+}
+
+.sheet-col .sheet-header:before,
+.sheet-col .sheet-header:after {
+    height: 1px;
 }
 
 .sheet-body .sheet-header:before {
