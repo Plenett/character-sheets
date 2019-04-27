@@ -1,6 +1,6 @@
 # Fiche Personnage "Le Secret Des Gardiens" pour Roll20
 
-Cette fiche personnage est basé sur le travail d'Ezechiel Din Cyr (@EzechielDinCyr).
+Cette fiche personnage est basée sur le travail d'Ezechiel Din Cyr (@EzechielDinCyr).
 
 ## Création des dés
 

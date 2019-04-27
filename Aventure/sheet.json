@@ -159,9 +159,18 @@ button:hover {
 }
 
 .sheet-statut {
-    margin-top: 20px;
+    margin-top: 7px;
     display: inline-block;
-    width: 19%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sheet-statut .sheet-3em {
+    width: 20%;
+}
+
+.sheet-statut .sheet-5em {
+    width: 30%;
 }
 
 .sheet-statut span {
@@ -201,62 +210,72 @@ button:hover {
 }
 
 .sheet-vert .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-prestige-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-prestige-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-vert .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-prestige-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-prestige-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-orange .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-fatigue-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-fatigue-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-orange .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-fatigue-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-fatigue-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-rouge .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-blessure-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-blessure-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-rouge .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-blessure-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-blessure-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-bleu .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-surmenage-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-surmenage-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-bleu .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-surmenage-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-surmenage-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-rose .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-handicap-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-handicap-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-rose .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-handicap-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-handicap-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-violet .sheet-dots input[type="radio"]:not([value="0"]) + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-5-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-5-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-violet .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-5-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-5-unchecked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-black .sheet-dots input[type="radio"]:not([value="0"]) + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-6-checked.PNG") no-repeat;
+    background-size:100%;
+}
+
+.sheet-black .sheet-dots input[type='radio']:checked ~ input[type='radio'] + span {
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-6-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
@@ -294,7 +313,7 @@ button:hover {
     margin-right: -50%;
 }
 
-/*Attributs & CompÃ©tences */
+/*Attributs & Compétences */
 .sheet-attribut {
     width: 100%;
     display: inline-block;
@@ -347,22 +366,11 @@ button:hover {
 }
 
 .sheet-attribut .sheet-dots input[type=radio][value="0"] + span:before {
-    font-size: 24px;
-}
-
-.sheet-competences .sheet-dots input[type=radio][value="0"] + span:before {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .sheet-dots:hover input[type="radio"][value="0"] + span:before {
     opacity: 1;
-}
-
-.sheet-attribut .sheet-dots input[type='radio'] {
-    height: 20px;
-    width: 20px;
-    opacity:0;
-    position:absolute;
 }
 
 .sheet-attribut .sheet-dots input[type='radio'] {
@@ -373,67 +381,73 @@ button:hover {
 }
 
 .sheet-attribut .sheet-dots input[type="radio"] + span {
-    height: 20px;
-    width: 20px;
-}
-
-.sheet-competences .sheet-dots input[type="radio"] + span {
     height: 17px;
     width: 17px;
-    margin:1.5px;
 }
 
 .sheet-points .sheet-dots input[type="radio"][value="1"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-1-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-1-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type="radio"][value="2"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-2-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-2-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type="radio"][value="3"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-3-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-3-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type="radio"][value="4"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-4-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-4-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type="radio"][value="5"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-5-checked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-5-checked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="1"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-1-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-1-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="2"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-2-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-2-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="3"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-3-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-3-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="4"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-4-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-4-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
 .sheet-points .sheet-dots input[type='radio']:checked ~ input[type='radio'][value="5"] + span {
-    background: url("https://raw.githubusercontent.com/EzechielDinCyr/LESTREAM-GUARDIANS-S_SECRET-CHARACTER_SHEETS/master/image/checkbox-5-unchecked.PNG") no-repeat;
+    background: url("https://raw.githubusercontent.com/Plenett/character-sheets/master/Le%20Secret%20Des%20Gardiens/image/checkbox-5-unchecked.PNG") no-repeat;
     background-size:100%;
 }
 
-/* Ã‰quipements */
+/* Maitrise */
+.sheet-maitrise input[type=text] {
+    border-bottom: 1px solid black;
+    width: 45%;
+    font-size: 14px;
+}
+
+.sheet-maitrise input[type='radio'] {
+    height: 5px;
+    width: 5px;
+}
+
+/* Équipements */
 .sheet-equipements .sheet-right {
     border-left: solid 2px black;
 }
