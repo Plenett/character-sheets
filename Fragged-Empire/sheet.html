@@ -43,7 +43,7 @@
     <div class="tabs tab-col">
 		<input type="hidden" name="attr_tab" value="core"/>
 		<button type="action" name="act_tab_core" title="@{tab}">core</button>
-		<button type="action" name="act_tab_gear" title="@{tab}">gear</button>
+		<button type="action" name="act_tab_combat" title="@{tab}">combat</button>
 		<button type="action" name="act_tab_note" title="@{tab}">notes</button>
 	</div>
 	
@@ -89,7 +89,7 @@
     	            <div class="attribute-text">Force</div>
     	            <input class="strength-base" type="number" name="attr_strength_base" value="0"><span> + </span>
                     <input type="number" name="attr_strength_bonus" value="0"><span> = </span>
-                    <input type="number" name="attr_strength_total" value="@{strength_base}-@{strength_bonus}" disabled="true">
+                    <input type="number" name="attr_strength_total" value="@{strength_base}+@{strength_bonus}" disabled="true">
                     <input type="text" name="attr_strength_trait">
     	        </div>
     	        
@@ -473,10 +473,125 @@
 	            </div>
     	    </div>
 	    </div>
+	    
+	    <div class="strong-hit">
+	        <table style="width: 100%;">
+                <tr>
+                    <td style="width: 2%"></td>
+                    <td style="width: 15%"><h1>Coup Puissant</h1></td>
+                    <td style="width: 25%"><h1>Prérequis</h1></td>
+                    <td style="width: 55%"><h1>Effet(s)</h1></td>
+                </tr>
+                
+                <tr>
+                    <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                    <td style="width: 15%;"><input type="text" name="attr_strong-hit_name" value="Effort" disabled="true"></td>
+                    <td style="width: 25%;"><input type="text" name="attr_strong-hit_requirements" value="N'exige pas de réussite" disabled="true"></td>
+                    <td style="width: 55%;"><input type="text" name="attr_strong-hit_effect" value="Vous pouvez relancer un seul Dé de ce Test de Compétence" disabled="true"></td>
+                </tr>
+            </table>
+        
+
+            <fieldset class="repeating_strong-hit">
+                <table>
+                    <tr>
+                        <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                        <td style="width: 15%;"><input type="text" name="attr_strong-hit_name"></td>
+                        <td style="width: 25%;"><input type="text" name="attr_strong-hit_requirements"></td>
+                        <td style="width: 55%;"><input type="text" name="attr_strong-hit_effect"></td>
+                    </tr>
+                </table>
+            </fieldset>
+	    </div>
 	</div>
 	
-	<div class="gear">
-	    Gear
+	<div class="combat">
+	    <div class="stats">
+    	    <div class="col col1 attributes">
+    	        <div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">1. Force</div>
+                    <input class="strength-base" type="number" name="attr_strength_current" value="0"><span> / </span>
+                    <input type="number" name="attr_strength_current_total" value="@{strength_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">2. Réflexes</div>
+                    <input class="reflexes-base" type="number" name="attr_reflexes_current" value="0"><span> / </span>
+                    <input type="number" name="attr_reflexes_current_total" value="@{reflexes_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">3. Mouvement</div>
+                    <input class="movement-base" type="number" name="attr_movement_current" value="0"><span> / </span>
+                    <input type="number" name="attr_movement_current_total" value="@{movement_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">4. Concentration</div>
+                    <input class="focus-base" type="number" name="attr_focus_current" value="0"><span> / </span>
+                    <input type="number" name="attr_focus_current_total" value="@{focus_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">5. Intelligence</div>
+                    <input class="intelligence-base" type="number" name="attr_intelligence_current" value="0"><span> / </span>
+                    <input type="number" name="attr_intelligence_current_total" value="@{intelligence_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">6. Perception</div>
+                    <input class="perception-base" type="number" name="attr_perception_current" value="0"><span> / </span>
+                    <input type="number" name="attr_perception_current_total" value="@{perception_total}" disabled="true">
+    	        </div>
+    	       
+    			<div class="attribute">
+    			    <div class="space"></div>
+                    <div class="fate-text">Destin</div>
+                    <input class="fate-base" type="number" name="attr_fate_current" value="0"><span> / </span>
+                    <input type="number" name="attr_fate_current_total" value="@{fate_total}" disabled="true">
+    	        </div>
+    	    </div>
+    	    
+    	    <div class="col col2">
+    	        <div class="condition">
+    	            <h1>Conditions Mineures</h1>
+    	            <textarea name="attr_minor_condition" cols="1" rows="1"></textarea>
+    	        </div>
+    	        <div class="condition">
+    	            <h1>Conditions Majeures</h1>
+    	            <textarea name="attr_major_condition" cols="1" rows="1"></textarea>
+    	        </div>
+    	    </div>
+    	    
+    	    <div class="col col3 combat-stats">
+    	        <div class="order">
+    	            <h1>Ordre de Combat</h1>
+    	            <input type="number" name="attr_order_base" value="@{intelligence_current}" disabled="true"><span> + </span>
+    	            <input type="number" name="attr_order_bonus" value="0"><span> = </span>
+    	            <input type="number" name="attr_order_total" value="@{order_bonus}+@{order_base}" disabled="true">
+    	        </div>
+    	        
+    	        <div class="overburdened">
+    	            <h1>Surcharge</h1><span> (Poids équipement > FOR)</span><br/>
+    	            <span>Tenue </span><input type="number" name="attr_overburdened_outfit" value="-1" disabled="true">
+    	            <span>Utilitaire </span><input type="number" name="attr_overburdened_utility" value="-1" disabled="true">
+    	            <span>Weapon </span><input type="number" name="attr_overburdened_weapon" value="0">
+    	            <input type="number" name="attr_overburdened_outfit" value="-1" disabled="true" style="margin-left: 16px;"><span> DEF</span>
+    	        </div>
+    	        
+    	        <div class="stealth">
+    	            <h1>Furtivité</h1>
+    	            <input type="number" name="attr_stealth_base" value="@{reflexes_current}+@{tactical_total}" disabled="true"><span> + </span>
+    	            <input type="number" name="attr_stealth_bonus" value="0"><span> = </span>
+    	            <input type="number" name="attr_stealth_total" value="@{stealth_bonus}+@{stealth_base}" disabled="true">
+    	        </div>
+    	    </div>
 	</div>
     
     <div class="note">
@@ -485,21 +600,11 @@
 </div>
 
 <script type="text/worker">
-    [`core`, `gear`, `note`].forEach(attr => {
+    [`core`, `combat`, `note`].forEach(attr => {
    		on(`clicked:tab_${attr}`, () => {
    			console.log(`c% The button clicked was tab_${attr} update tab to ${attr}`);
    			setAttrs({tab: attr});
    		});
-   });
-   
-   ['strength'].forEach(attr => {
-       on('clicked:${attr}_change', () => {
-            console.log(`c% The button clicked was ${attr}_change`);
-   		    if (${${attr}_change} =="true")
-   		        setAttrs({${${attr}_change}: false});
-   		    else
-   		        setAttrs({${${attr}_change}: true});
-       });
    });
 </script>
 

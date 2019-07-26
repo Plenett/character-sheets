@@ -98,21 +98,21 @@ button[type="roll"]:hover {
 }			
 
 .sheet-tabs input[value*="core"] ~ button[name*="core"],
-.sheet-tabs input[value*="gear"] ~ button[name*="gear"],
+.sheet-tabs input[value*="combat"] ~ button[name*="combat"],
 .sheet-tabs input[value*="note"] ~ button[name*="note"] {
 	background-color: #fff;
 	border-bottom: none;
 	color: #000;
 }
 
-/**.sheet-core,**/
-.sheet-gear,
+.sheet-core,
+/*.sheet-combat,*/
 .sheet-note {
     display: none;
 }
 
 .sheet-options_toggle[value="core"] ~ .sheet-core,
-.sheet-options_toggle[value="gear"] ~ .sheet-gear,
+.sheet-options_toggle[value="combat"] ~ .sheet-combat,
 .sheet-options_toggle[value="note"] ~ .sheet-note {
     display: inline-block;
 }
@@ -369,6 +369,112 @@ button[type="roll"]:hover {
     margin-bottom: 3.5px;
 }
 
+/*** Strong hit ***/
+.sheet-strong-hit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sheet-strong-hit input[type=text]{
+    border-radius: 0;
+    padding-bottom: 3px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    width: 95%;
+    font-size: 10px;
+}
+
+.sheet-strong-hit h1{
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 0;
+}
+
+.sheet-strong-hit button[type=roll]{
+    width: 2%;
+    font-family: 'Pictos';
+}
+
+/*** PC-combat ***/
+/*** attribute ***/
+.sheet-combat .sheet-stats .sheet-col {
+    width: 32%;
+}
+
+.sheet-combat .sheet-stats .sheet-space {
+    display: inline-block;
+    width: 10%;
+}
+
+.sheet-combat .sheet-col input[type=number] {
+    width: 9%;
+}
+
+.sheet-combat .sheet-col .sheet-attribute-text,
+.sheet-combat .sheet-col .sheet-fate-text {
+    width: 50%;
+}
+
+.sheet-combat .sheet-attributes {
+    display: inline-block;
+}
+
+.sheet-combat .sheet-condition {
+    display: inline-block;
+}
+
+.sheet-combat .sheet-condition h1 {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+.sheet-combat .sheet-condition textarea {
+    display: inline-block;
+    padding-left: 2px;
+    font-size: 1rem;
+    resize: none;
+    margin: 0;
+    width: 135%;
+    height: 52px;
+    line-height: 1.3em;
+}
+
+.sheet-combat-stats {
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sheet-combat-stats h1 {
+    width: 60%;
+    font-size: 12px;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.sheet-order,
+.sheet-overburdened, 
+.sheet-stealth {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 20px;
+}
+
+.sheet-overburdened h1 {
+    width: 30%;
+}
+
+.sheet-overburdened span {
+    font-size: 8px;
+}
 
 /*** Roll Template ***/
 .sheet-rolltemplate-skill .sheet-template-container {
