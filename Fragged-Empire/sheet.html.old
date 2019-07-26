@@ -1,0 +1,827 @@
+<div class="container">
+    
+    <div class="header">
+        <div class="logo"></div>
+        <div class="info-box">
+            <div class="info-line">
+                <div class="info-block" style="width: 55%;">
+                    <input type="text" name="attr_character_name" placeholder="Adam Blaze" title="@{character_name}"/>
+                    <h1>Nom du Personnage</h1>
+                </div>
+                <div class="info-block" style="width: 43%;">
+                    <input type="text" name="attr_character_player" placeholder="Galdormin" title="@{player}"/>
+                    <h1>Joueur</h1>
+                </div>
+            </div>
+            <div class="info-line">
+                <div class="info-block" style="width: 30%;">
+                    <input type="text" name="attr_character_race" placeholder="Kaltoriens" title="@{character_race}"/>
+                    <h1>Race</h1>
+                </div>
+                <div class="info-block" style="width: 17%;">
+                    <input type="text" name="attr_character_gender" placeholder="Homme" title="@{character_gender}"/>
+                    <h1>Genre</h1>
+                </div>
+                <div class="info-block" style="width: 17%;">
+                    <input type="text" name="attr_character_weight" placeholder="70 kg" title="@{character_weight}"/>
+                    <h1>Poids</h1>
+                </div>
+                <div class="info-block" style="width: 17%;">
+                    <input type="text" name="attr_character_height" placeholder="1.65 m" title="@{character_height}"/>
+                    <h1>Taille</h1>
+                </div>
+                <div class="info-block" style="width: 12%;">
+                    <input type="text" name="attr_character_age" placeholder="25 ans" title="@{character_age}"/>
+                    <h1>Age</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <input class="options_toggle" name="attr_tab" type="hidden" value="options" />
+    
+    <div class="tabs tab-col">
+		<input type="hidden" name="attr_tab" value="core"/>
+		<button type="action" name="act_tab_core" title="@{tab}">core</button>
+		<button type="action" name="act_tab_combat" title="@{tab}">combat</button>
+		<button type="action" name="act_tab_note" title="@{tab}">notes</button>
+	</div>
+	
+	<div class="core">
+	    <div class="resources">
+	        <div class="level">
+	            <h1>Niveau</h1>
+	            <input type="number" name="attr_level" value="1">
+	            <input type="text" name="attr_level_trait">
+	        </div>
+	        
+	        <div class="resource">
+	            <h1>Ressources Max</h1>
+	            <input type="number" name="attr_resources_max_base" value="@{level}+2" disabled="true"><span> + </span>
+	            <input type="number" name="attr_resources_max_bonus" value="0"><span> = </span>
+	            <input type="number" name="attr_resources_max_total" value="@{resources_max_base}+@{resources_max_bonus}"} disabled="true">
+	            <input type="text" name="attr_resources_max_trait">
+	            <div class="space"></div>
+	            <h1 style="width: 20%">Ressources Courantes</h1>
+	            <input type="number" name="attr_resources_current" value="3"><span> / </span>
+	            <input type="number" name="attr_resources_current_max" value="@{resources_max_total}" disabled="true">
+	        </div>
+	        
+	        <div class="resource">
+	            <h1>Influence Max</h1>
+	            <input type="number" name="attr_influence_max_base" value="@{level}+2" disabled="true"><span> + </span>
+	            <input type="number" name="attr_influence_max_bonus" value="0"><span> = </span>
+	            <input type="number" name="attr_influence_max_total" value="@{influence_max_base}+@{influence_max_bonus}"} disabled="true">
+	            <input type="text" name="attr_influence_max_trait">
+	            <div class="space"></div>
+	            <h1 style="width: 20%">Influence Courante</h1>
+	            <input type="number" name="attr_influence_current" value="3"><span> / </span>
+	            <input type="number" name="attr_influence_current_max" value="@{influence_max_total}" disabled="true">
+	        </div>
+
+	    </div>
+	    
+	    <div class="stats">
+    	    <div class="col col1 attributes">
+    	        <div class="attribute">
+    	            <input type="hidden" class="strength_toggle" name="attr_strength_toggle">
+    	            <input type="checkbox" name="attr_strength_toggle" value="1">
+    	            <div class="attribute-text">Force</div>
+    	            <input class="strength-base" type="number" name="attr_strength_base" value="0"><span> + </span>
+                    <input type="number" name="attr_strength_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_strength_total" value="@{strength_base}+@{strength_bonus}" disabled="true">
+                    <input type="text" name="attr_strength_trait">
+    	        </div>
+    	        
+    	        <div class="attribute">
+    	            <input type="hidden" class="reflexes_toggle" name="attr_reflexes_toggle">
+    	            <input type="checkbox" name="attr_reflexes_toggle" value="1">
+    	            <div class="attribute-text">Réflexes</div>
+    	            <input class="reflexes-base" type="number" name="attr_reflexes_base" value="0"><span> + </span>
+                    <input type="number" name="attr_reflexes_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_reflexes_total" value="@{reflexes_base}+@{reflexes_bonus}" disabled="true">
+                    <input type="text" name="attr_reflexes_trait">
+    	        </div>
+    	        
+    	        <div class="attribute">
+    	            <input type="hidden" class="movement_toggle" name="attr_movement_toggle">
+    	            <input type="checkbox" name="attr_movement_toggle" value="1">
+    	            <div class="attribute-text">Mouvement</div>
+    	            <input class="movement-base" type="number" name="attr_movement_base" value="0"><span> + </span>
+                    <input type="number" name="attr_movement_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_movement_total" value="@{movement_base}+@{movement_bonus}" disabled="true">
+                    <input type="text" name="attr_movement_trait">
+    	        </div>
+    	        
+    	        <div class="attribute">
+    	            <input type="hidden" class="focus_toggle" name="attr_focus_toggle">
+    	            <input type="checkbox" name="attr_focus_toggle" value="1">
+    	            <div class="attribute-text">Concentration</div>
+    	            <input class="focus-base" type="number" name="attr_focus_base" value="0"><span> + </span>
+                    <input type="number" name="attr_focus_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_focus_total" value="@{focus_base}+@{focus_bonus}" disabled="true">
+                    <input type="text" name="attr_focus_trait">
+    	        </div>
+    	        
+    	        <div class="attribute">
+    	            <input type="hidden" class="intelligence_toggle" name="attr_intelligence_toggle">
+    	            <input type="checkbox" name="attr_intelligence_toggle" value="1">
+    	            <div class="attribute-text">Intelligence</div>
+    	            <input class="intelligence-base" type="number" name="attr_intelligence_base" value="0"><span> + </span>
+                    <input type="number" name="attr_intelligence_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_intelligence_total" value="@{intelligence_base}+@{intelligence_bonus}" disabled="true">
+                    <input type="text" name="attr_intelligence_trait">
+    	        </div>
+    	        
+    	        <div class="attribute">
+    	            <input type="hidden" class="perception_toggle" name="attr_perception_toggle">
+    	            <input type="checkbox" name="attr_perception_toggle" value="1">
+    	            <div class="attribute-text">Perception</div>
+    	            <input class="perception-base" type="number" name="attr_perception_base" value="0"><span> + </span>
+                    <input type="number" name="attr_perception_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_perception_total" value="@{perception_base}+@{perception_bonus}" disabled="true">
+                    <input type="text" name="attr_perception_trait">
+    	        </div>
+    			
+    			<div class="attribute">
+    	            <div class="fate-text">Destin</div>
+    	            <input class="fate-base" type="number" name="attr_fate_base" value="2" disabled="true"><span> + </span>
+                    <input type="number" name="attr_fate_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_fate_total" value="@{fate_base}+@{fate_bonus}" disabled="true">
+                    <input type="text" name="attr_fate_trait">
+    	        </div>
+    	    </div>
+    	    
+    	    <div class="col col2">
+    	        <div class="advantage">
+    	            <h1>Avantages</h1>
+    	            <textarea name="attr_advantages" cols="1" rows="1"></textarea>
+    	        </div>
+    	        <div class="advantage">
+    	            <h1>Désavantages</h1>
+    	            <textarea name="attr_disadvantages" cols="1" rows="1"></textarea>
+    	        </div>
+    	        <div class="spare-time">
+    	            <h1>Pts Temps Libre</h1>
+    	            <input type="number" name="attr_spare-time_current" value="3"><span> / </span>
+    	            <input type="number" name="attr_spare-time_max" value="10" disabled="true">
+    	            <div class="space"></div>
+    	            <button type="roll" name="spare-time" value="&{template:skill} {{skill-name=Temps Libre}} {{bonus=[[@{spare-time_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{spare-time_bonus}+?{Modifieur|0}]]}}"><span>Jet de Temps Libre</span></button><span> +</span>
+    	            <input type="number" name="attr_spare-time_bonus" value="0">
+    	        </div>
+    	    </div>
+    	    
+	    </div>
+	    
+	    <div class="skills">
+    	    <div class="col col1 primary-skills">
+	            <h1>Compétences Usuelles</h1>
+				
+                <div class="everyday-skill">
+                    <input type="checkbox" name="attr_wealth_is_trained" value="1">
+                    <button type="roll" name="wealth" value="&{template:skill} {{skill-name=Richesse}} {{trained=[[@{wealth_trained}]]}} {{bonus=[[@{wealth_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{wealth_trained}+@{wealth_bonus}+?{Modifieur|0}]]}}"><span>Richesse</span></button>
+                    <input type="number" name="attr_wealth_trained" value="-2+3*@{wealth_is_trained}" disabled="true"><span> + </span>
+                    <input type="number" name="attr_wealth_bonus" value="0"><span> = </span>
+                    <input type="number" name="attr_wealth_total" value="@{wealth_bonus}+@{wealth_trained}" disabled="true">
+                    <input type="text" name="attr_wealth_trait">
+                    <span> .. </span>
+                    <input type="checkbox" name="attr_wealth_tb">
+                    <input type="checkbox" name="attr_wealth_ws">
+                    <input type="checkbox" name="attr_wealth_dw">
+                </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_conversation_is_trained" value="1">
+	                <button type="roll" name="conversation" value="&{template:skill} {{skill-name=Conversation}} {{trained=[[@{conversation_trained}]]}} {{bonus=[[@{conversation_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{conversation_trained}+@{conversation_bonus}+?{Modifieur|0}]]}}"><span>Conversation</span></button>
+	                <input type="number" name="attr_conversation_trained" value="-2+3*@{conversation_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_conversation_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_conversation_total" value="@{conversation_bonus}+@{conversation_trained}" disabled="true">
+	                <input type="text" name="attr_conversation_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_conversation_tb">
+	                <input type="checkbox" name="attr_conversation_ws">
+	                <input type="checkbox" name="attr_conversation_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_leadership_is_trained" value="1">
+	                <button type="roll" name="leadership" value="&{template:skill} {{skill-name=Commandement}} {{trained=[[@{leadership_trained}]]}} {{bonus=[[@{leadership_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{leadership_trained}+@{leadership_bonus}+?{Modifieur|0}]]}}"><span>Commandement</span></button>
+	                <input type="number" name="attr_leadership_trained" value="-2+3*@{leadership_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_leadership_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_leadership_total" value="@{leadership_bonus}+@{leadership_trained}" disabled="true">
+	                <input type="text" name="attr_leadership_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_leadership_tb">
+	                <input type="checkbox" name="attr_leadership_ws">
+	                <input type="checkbox" name="attr_leadership_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_culture_is_trained" value="1">
+	                <button type="roll" name="culture" value="&{template:skill} {{skill-name=Culture}} {{trained=[[@{culture_trained}]]}} {{bonus=[[@{culture_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{culture_trained}+@{culture_bonus}+?{Modifieur|0}]]}}"><span>Culture</span></button>
+	                <input type="number" name="attr_culture_trained" value="-2+3*@{culture_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_culture_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_culture_total" value="@{culture_bonus}+@{culture_trained}" disabled="true">
+	                <input type="text" name="attr_culture_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_culture_tb">
+	                <input type="checkbox" name="attr_culture_ws">
+	                <input type="checkbox" name="attr_culture_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_phys_is_trained" value="1">
+	                <button type="roll" name="phys" value="&{template:skill} {{skill-name=Physique}} {{trained=[[@{phys_trained}]]}} {{bonus=[[@{phys_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{phys_trained}+@{phys_bonus}+?{Modifieur|0}]]}}"><span>Physique</span></button>
+	                <input type="number" name="attr_phys_trained" value="-2+3*@{phys_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_phys_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_phys_total" value="@{phys_bonus}+@{phys_trained}" disabled="true">
+	                <input type="text" name="attr_phys_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_phys_tb">
+	                <input type="checkbox" name="attr_phys_ws">
+	                <input type="checkbox" name="attr_phys_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_resolve_is_trained" value="1">
+	                <button type="roll" name="resolve" value="&{template:skill} {{skill-name=Détermination}} {{trained=[[@{resolve_trained}]]}} {{bonus=[[@{resolve_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{resolve_trained}+@{resolve_bonus}+?{Modifieur|0}]]}}"><span>Détermination</span></button>
+	                <input type="number" name="attr_resolve_trained" value="-2+3*@{resolve_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_resolve_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_resolve_total" value="@{resolve_bonus}+@{resolve_trained}" disabled="true">
+	                <input type="text" name="attr_resolve_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_resolve_tb">
+	                <input type="checkbox" name="attr_resolve_ws">
+	                <input type="checkbox" name="attr_resolve_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_awareness_is_trained" value="1">
+	                <button type="roll" name="awareness" value="&{template:skill} {{skill-name=Conscience}} {{trained=[[@{awareness_trained}]]}} {{bonus=[[@{awareness_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{awareness_trained}+@{awareness_bonus}+?{Modifieur|0}]]}}"><span>Conscience</span></button>
+	                <input type="number" name="attr_awareness_trained" value="-2+3*@{awareness_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_awareness_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_awareness_total" value="@{awareness_bonus}+@{awareness_trained}" disabled="true">
+	                <input type="text" name="attr_awareness_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_awareness_tb">
+	                <input type="checkbox" name="attr_awareness_ws">
+	                <input type="checkbox" name="attr_awareness_dw">
+	            </div>
+				
+				<div class="everyday-skill">
+	                <input type="checkbox" name="attr_survival_is_trained" value="1">
+	                <button type="roll" name="survival" value="&{template:skill} {{skill-name=Survie}} {{trained=[[@{survival_trained}]]}} {{bonus=[[@{survival_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{survival_trained}+@{survival_bonus}+?{Modifieur|0}]]}}"><span>Survie</span></button>
+	                <input type="number" name="attr_survival_trained" value="-2+3*@{survival_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_survival_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_survival_total" value="@{survival_bonus}+@{survival_trained}" disabled="true">
+	                <input type="text" name="attr_survival_trait">
+                    <span> .. </span>
+	                <input type="checkbox" name="attr_survival_tb">
+	                <input type="checkbox" name="attr_survival_ws">
+	                <input type="checkbox" name="attr_survival_dw">
+	            </div>
+	            
+	            <h1>Compétences Professionelles</h1>
+				
+	            <div class="professional-skill">
+	                <input type="checkbox" name="attr_mechanics_is_trained" value="1">
+	                <button type="roll" name="mechanics" value="&{template:skill} {{skill-name=Mécanique}} {{trained=[[@{mechanics_trained}]]}} {{bonus=[[@{mechanics_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{mechanics_trained}+@{mechanics_bonus}+?{Modifieur|0}]]}}"><span>Mécanique</span></button>
+	                <input type="number" name="attr_mechanics_trained" value="-2+3*@{mechanics_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_mechanics_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_mechanics_total" value="@{mechanics_bonus}+@{mechanics_trained}" disabled="true">
+	                <input type="text" name="attr_mechanics_trait">
+					<input type="checkbox" name="attr_mechanics_tk">
+	                <input type="checkbox" name="attr_mechanics_tb">
+	                <input type="checkbox" name="attr_mechanics_ws">
+	                <input type="checkbox" name="attr_mechanics_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_electronics_is_trained" value="1">
+	                <button type="roll" name="electronics" value="&{template:skill} {{skill-name=Électronique}} {{trained=[[@{electronics_trained}]]}} {{bonus=[[@{electronics_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{electronics_trained}+@{electronics_bonus}+?{Modifieur|0}]]}}"><span>Électronique</span></button>
+	                <input type="number" name="attr_electronics_trained" value="-2+3*@{electronics_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_electronics_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_electronics_total" value="@{electronics_bonus}+@{electronics_trained}" disabled="true">
+	                <input type="text" name="attr_electronics_trait">
+					<input type="checkbox" name="attr_electronics_tk">
+	                <input type="checkbox" name="attr_electronics_tb">
+	                <input type="checkbox" name="attr_electronics_ws">
+	                <input type="checkbox" name="attr_electronics_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_programming_is_trained" value="1">
+	                <button type="roll" name="programming" value="&{template:skill} {{skill-name=Programmation}} {{trained=[[@{programming_trained}]]}} {{bonus=[[@{programming_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{programming_trained}+@{programming_bonus}+?{Modifieur|0}]]}}"><span>Programmation</span></button>
+	                <input type="number" name="attr_programming_trained" value="-2+3*@{programming_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_programming_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_programming_total" value="@{programming_bonus}+@{programming_trained}" disabled="true">
+	                <input type="text" name="attr_programming_trait">
+					<input type="checkbox" name="attr_programming_tk">
+	                <input type="checkbox" name="attr_programming_tb">
+	                <input type="checkbox" name="attr_programming_ws">
+	                <input type="checkbox" name="attr_programming_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_bio-tech_is_trained" value="1">
+	                <button type="roll" name="bio-tech" value="&{template:skill} {{skill-name=BioTech}} {{trained=[[@{bio-tech_trained}]]}} {{bonus=[[@{bio-tech_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{bio-tech_trained}+@{bio-tech_bonus}+?{Modifieur|0}]]}}"><span>BioTech</span></button>
+	                <input type="number" name="attr_bio-tech_trained" value="-2+3*@{bio-tech_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_bio-tech_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_bio-tech_total" value="@{bio-tech_bonus}+@{bio-tech_trained}" disabled="true">
+	                <input type="text" name="attr_bio-tech_trait">
+					<input type="checkbox" name="attr_bio-tech_tk">
+	                <input type="checkbox" name="attr_bio-tech_tb">
+	                <input type="checkbox" name="attr_bio-tech_ws">
+	                <input type="checkbox" name="attr_bio-tech_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_medecine_is_trained" value="1">
+	                <button type="roll" name="medecine" value="&{template:skill} {{skill-name=Médecine}} {{trained=[[@{medecine_trained}]]}} {{bonus=[[@{medecine_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{medecine_trained}+@{medecine_bonus}+?{Modifieur|0}]]}}"><span>Médecine</span></button>
+	                <input type="number" name="attr_medecine_trained" value="-2+3*@{medecine_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_medecine_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_medecine_total" value="@{medecine_bonus}+@{medecine_trained}" disabled="true">
+	                <input type="text" name="attr_medecine_trait">
+					<input type="checkbox" name="attr_medecine_tk">
+	                <input type="checkbox" name="attr_medecine_tb">
+	                <input type="checkbox" name="attr_medecine_ws">
+	                <input type="checkbox" name="attr_medecine_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_psychology_is_trained" value="1">
+	                <button type="roll" name="psychology" value="&{template:skill} {{skill-name=Psychologie}} {{trained=[[@{psychology_trained}]]}} {{bonus=[[@{psychology_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{psychology_trained}+@{psychology_bonus}+?{Modifieur|0}]]}}"><span>Psychologie</span></button>
+	                <input type="number" name="attr_psychology_trained" value="-2+3*@{psychology_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_psychology_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_psychology_total" value="@{psychology_bonus}+@{psychology_trained}" disabled="true">
+	                <input type="text" name="attr_psychology_trait">
+					<input type="checkbox" name="attr_psychology_tk">
+	                <input type="checkbox" name="attr_psychology_tb">
+	                <input type="checkbox" name="attr_psychology_ws">
+	                <input type="checkbox" name="attr_psychology_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_astronomy_is_trained" value="1">
+	                <button type="roll" name="astronomy" value="&{template:skill} {{skill-name=Astronomie}} {{trained=[[@{astronomy_trained}]]}} {{bonus=[[@{astronomy_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{astronomy_trained}+@{astronomy_bonus}+?{Modifieur|0}]]}}"><span>Astronomie</span></button>
+	                <input type="number" name="attr_astronomy_trained" value="-2+3*@{astronomy_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_astronomy_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_astronomy_total" value="@{astronomy_bonus}+@{astronomy_trained}" disabled="true">
+	                <input type="text" name="attr_astronomy_trait">
+					<input type="checkbox" name="attr_astronomy_tk">
+	                <input type="checkbox" name="attr_astronomy_tb">
+	                <input type="checkbox" name="attr_astronomy_ws">
+	                <input type="checkbox" name="attr_astronomy_dw">
+	            </div>
+				
+				<div class="professional-skill">
+	                <input type="checkbox" name="attr_planetoids_is_trained" value="1">
+	                <button type="roll" name="planetoids" value="&{template:skill} {{skill-name=Planétoïdes}} {{trained=[[@{planetoids_trained}]]}} {{bonus=[[@{planetoids_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{planetoids_trained}+@{planetoids_bonus}+?{Modifieur|0}]]}}"><span>Planétoïdes</span></button>
+	                <input type="number" name="attr_planetoids_trained" value="-2+3*@{planetoids_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_planetoids_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_planetoids_total" value="@{planetoids_bonus}+@{planetoids_trained}" disabled="true">
+	                <input type="text" name="attr_planetoids_trait">
+					<input type="checkbox" name="attr_planetoids_tk">
+	                <input type="checkbox" name="attr_planetoids_tb">
+	                <input type="checkbox" name="attr_planetoids_ws">
+	                <input type="checkbox" name="attr_planetoids_dw">
+	            </div>
+	        </div>
+	        
+	        <div class="col col2 combat-skills">
+    	        <h1>Compétences de Combat Personel</h1>
+				
+	            <div class="personal-skill">
+	                <input type="checkbox" name="attr_small-arms_is_trained" value="1">
+	                <button type="roll" name="small-arms" value="&{template:skill} {{skill-name=Armes Légères}} {{trained=[[@{small-arms_trained}]]}} {{bonus=[[@{small-arms_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{small-arms_trained}+@{small-arms_bonus}+?{Modifieur|0}]]}}"><span>Armes Légères</span></button>
+	                <input type="number" name="attr_small-arms_trained" value="-2+3*@{small-arms_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_small-arms_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_small-arms_total" value="@{small-arms_bonus}+@{small-arms_trained}" disabled="true">
+	                <input type="text" name="attr_small-arms_trait_1">
+	                <input type="text" name="attr_small-arms_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_heavy-arms_is_trained" value="1">
+	                <button type="roll" name="heavy-arms" value="&{template:skill} {{skill-name=Armes Lourdes}} {{trained=[[@{heavy-arms_trained}]]}} {{bonus=[[@{heavy-arms_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{heavy-arms_trained}+@{heavy-arms_bonus}+?{Modifieur|0}]]}}"><span>Armes Lourdes</span></button>
+	                <input type="number" name="attr_heavy-arms_trained" value="-2+3*@{heavy-arms_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_heavy-arms_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_heavy-arms_total" value="@{heavy-arms_bonus}+@{heavy-arms_trained}" disabled="true">
+	                <input type="text" name="attr_heavy-arms_trait_1">
+	                <input type="text" name="attr_heavy-arms_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_tactical_is_trained" value="1">
+	                <button type="roll" name="tactical" value="&{template:skill} {{skill-name=Tactiques}} {{trained=[[@{tactical_trained}]]}} {{bonus=[[@{tactical_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{tactical_trained}+@{tactical_bonus}+?{Modifieur|0}]]}}"><span>Tactiques</span></button>
+	                <input type="number" name="attr_tactical_trained" value="-2+3*@{tactical_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_tactical_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_tactical_total" value="@{tactical_bonus}+@{tactical_trained}" disabled="true">
+	                <input type="text" name="attr_tactical_trait_1">
+	                <input type="text" name="attr_tactical_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_exotic_is_trained" value="1">
+	                <button type="roll" name="exotic" value="&{template:skill} {{skill-name=Éxotique}} {{trained=[[@{exotic_trained}]]}} {{bonus=[[@{exotic_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{exotic_trained}+@{exotic_bonus}+?{Modifieur|0}]]}}"><span>Éxotique</span></button>
+	                <input type="number" name="attr_exotic_trained" value="-2+3*@{exotic_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_exotic_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_exotic_total" value="@{exotic_bonus}+@{exotic_trained}" disabled="true">
+	                <input type="text" name="attr_exotic_trait_1">
+	                <input type="text" name="attr_exotic_trait_2">
+	            </div>
+				
+				<h1>Compétences en Véhicule</h1>
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_command_is_trained" value="1">
+	                <button type="roll" name="command" value="&{template:skill} {{skill-name=Pilotage}} {{trained=[[@{command_trained}]]}} {{bonus=[[@{command_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{command_trained}+@{command_bonus}+?{Modifieur|0}]]}}"><span>Pilotage</span></button>
+	                <input type="number" name="attr_command_trained" value="-2+3*@{command_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_command_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_command_total" value="@{command_bonus}+@{command_trained}" disabled="true">
+	                <input type="text" name="attr_command_trait_1">
+	                <input type="text" name="attr_command_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_engineering_is_trained" value="1">
+	                <button type="roll" name="engineering" value="&{template:skill} {{skill-name=Ingénierie}} {{trained=[[@{engineering_trained}]]}} {{bonus=[[@{engineering_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{engineering_trained}+@{engineering_bonus}+?{Modifieur|0}]]}}"><span>Ingénierie</span></button>
+	                <input type="number" name="attr_engineering_trained" value="-2+3*@{engineering_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_engineering_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_engineering_total" value="@{engineering_bonus}+@{engineering_trained}" disabled="true">
+	                <input type="text" name="attr_engineering_trait_1">
+	                <input type="text" name="attr_engineering_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_operations_is_trained" value="1">
+	                <button type="roll" name="operations" value="&{template:skill} {{skill-name=Opérations}} {{trained=[[@{operations_trained}]]}} {{bonus=[[@{operations_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{operations_trained}+@{operations_bonus}+?{Modifieur|0}]]}}"><span>Opérations</span></button>
+	                <input type="number" name="attr_operations_trained" value="-2+3*@{operations_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_operations_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_operations_total" value="@{operations_bonus}+@{operations_trained}" disabled="true">
+	                <input type="text" name="attr_operations_trait_1">
+	                <input type="text" name="attr_operations_trait_2">
+	            </div>
+				
+				<div class="personal-skill">
+	                <input type="checkbox" name="attr_gunnery_is_trained" value="1">
+	                <button type="roll" name="gunnery" value="&{template:skill} {{skill-name=Artillerie}} {{trained=[[@{gunnery_trained}]]}} {{bonus=[[@{gunnery_bonus}]]}} {{modifier=[[?{Modifieur|0}]]}} {{roll=[[3d6+@{gunnery_trained}+@{gunnery_bonus}+?{Modifieur|0}]]}}"><span>Artillerie</span></button>
+	                <input type="number" name="attr_gunnery_trained" value="-2+3*@{gunnery_is_trained}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_gunnery_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_gunnery_total" value="@{gunnery_bonus}+@{gunnery_trained}" disabled="true">
+	                <input type="text" name="attr_gunnery_trait_1">
+	                <input type="text" name="attr_gunnery_trait_2">
+	            </div>
+    	    </div>
+	    </div>
+	    
+	    <div class="strong-hit">
+	        <table style="width: 100%;">
+                <tr>
+                    <td style="width: 2%"></td>
+                    <td style="width: 15%"><h1>Coup Puissant</h1></td>
+                    <td style="width: 25%"><h1>Prérequis</h1></td>
+                    <td style="width: 55%"><h1>Effet(s)</h1></td>
+                </tr>
+                
+                <tr>
+                    <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                    <td style="width: 15%;"><input type="text" name="attr_strong-hit_name" value="Effort" disabled="true"></td>
+                    <td style="width: 25%;"><input type="text" name="attr_strong-hit_requirements" value="N'exige pas de réussite" disabled="true"></td>
+                    <td style="width: 55%;"><input type="text" name="attr_strong-hit_effect" value="Vous pouvez relancer un seul Dé de ce Test de Compétence" disabled="true"></td>
+                </tr>
+            </table>
+        
+
+            <fieldset class="repeating_strong-hit">
+                <table>
+                    <tr>
+                        <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                        <td style="width: 15%;"><input type="text" name="attr_strong-hit_name"></td>
+                        <td style="width: 25%;"><input type="text" name="attr_strong-hit_requirements"></td>
+                        <td style="width: 55%;"><input type="text" name="attr_strong-hit_effect"></td>
+                    </tr>
+                </table>
+            </fieldset>
+	    </div>
+	</div>
+	
+	<div class="combat">
+	    <div class="stats">
+    	    <div class="col col1 attributes">
+    	        <div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">1. Force</div>
+                    <input class="strength-base" type="number" name="attr_strength_current" value="0"><span> / </span>
+                    <input type="number" name="attr_strength_current_total" value="@{strength_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">2. Réflexes</div>
+                    <input class="reflexes-base" type="number" name="attr_reflexes_current" value="0"><span> / </span>
+                    <input type="number" name="attr_reflexes_current_total" value="@{reflexes_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">3. Mouvement</div>
+                    <input class="movement-base" type="number" name="attr_movement_current" value="0"><span> / </span>
+                    <input type="number" name="attr_movement_current_total" value="@{movement_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">4. Concentration</div>
+                    <input class="focus-base" type="number" name="attr_focus_current" value="0"><span> / </span>
+                    <input type="number" name="attr_focus_current_total" value="@{focus_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">5. Intelligence</div>
+                    <input class="intelligence-base" type="number" name="attr_intelligence_current" value="0"><span> / </span>
+                    <input type="number" name="attr_intelligence_current_total" value="@{intelligence_total}" disabled="true">
+    	        </div>
+				
+				<div class="attribute">
+                    <div class="space"></div>
+                    <div class="attribute-text">6. Perception</div>
+                    <input class="perception-base" type="number" name="attr_perception_current" value="0"><span> / </span>
+                    <input type="number" name="attr_perception_current_total" value="@{perception_total}" disabled="true">
+    	        </div>
+    	       
+    			<div class="attribute">
+    			    <div class="space"></div>
+                    <div class="fate-text">Destin</div>
+                    <input class="fate-base" type="number" name="attr_fate_current" value="0"><span> / </span>
+                    <input type="number" name="attr_fate_current_total" value="@{fate_total}" disabled="true">
+    	        </div>
+    	    </div>
+    	    
+    	    <div class="col col2">
+    	        <div class="condition">
+    	            <h1>Conditions Mineures</h1>
+    	            <textarea name="attr_minor_condition" cols="1" rows="1"></textarea>
+    	        </div>
+    	        <div class="condition">
+    	            <h1>Conditions Majeures</h1>
+    	            <textarea name="attr_major_condition" cols="1" rows="1"></textarea>
+    	        </div>
+    	    </div>
+    	    
+    	    <div class="col col3 combat-stats">
+    	        <div class="order">
+    	            <h1>Ordre de Combat</h1>
+    	            <input type="number" name="attr_order_base" value="@{intelligence_current}" disabled="true"><span> + </span>
+    	            <input type="number" name="attr_order_bonus" value="0"><span> = </span>
+    	            <input type="number" name="attr_order_total" value="@{order_bonus}+@{order_base}" disabled="true">
+    	        </div>
+    	        
+    	        <div class="overburdened">
+    	            <h1>Surcharge</h1><span> (Poids équipement > FOR)</span><br/>
+    	            <span>Tenue </span><input type="number" name="attr_overburdened_outfit" value="@{outfit_weight}" disabled="true">
+    	            <span>Utilitaire </span><input type="number" name="attr_overburdened_utility" value="@{outfit_utility}" disabled="true">
+    	            <span>Weapon </span><input type="number" name="attr_overburdened_weapon" value="0">
+    	            <input type="number" name="attr_overburdened_defense" value="0" disabled="true" style="margin-left: 16px;"><span> DEF</span>
+    	        </div>
+    	        
+    	        <div class="stealth">
+    	            <h1>Furtivité</h1>
+    	            <input type="number" name="attr_stealth_base" value="@{reflexes_current}+@{tactical_total}" disabled="true"><span> + </span>
+    	            <input type="number" name="attr_stealth_bonus" value="0"><span> = </span>
+    	            <input type="number" name="attr_stealth_total" value="@{stealth_bonus}+@{stealth_base}" disabled="true">
+    	        </div>
+    	        
+    	        <div class="scatter">
+    	            <h1>Dispersion</h1><br>
+    	            <span>1 intervalle par degré d'échec</span>
+    	            <div class="image"></div>
+    	        </div>
+    	    </div>
+	    </div>
+	    
+	    <div class="other-stats">
+	        <div class="col col1 defense">
+	            <div>
+	                <h1>Défense</h1>
+	                <input type="number" name="attr_defense_base" value="10+@{reflexes_current}-@{overburdened_defense}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_defense_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_defense_total" value="@{defense_base}+@{defense_bonus}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2>vs Handicap</h2>
+	                <input type="number" name="attr_defense_handicap_base" value="@{defense_total}+@{strength_current}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_defense_handicap_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_defense_handicap_total" value="@{defense_handicap_base}+@{defense_handicap_bonus}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2>vs Psionique</h2>
+	                <input type="number" name="attr_defense_psionic_base" value="@{defense_total}+@{focus_current}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_defense_psionic_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_defense_psionic_total" value="@{defense_psionic_base}+@{defense_psionic_bonus}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2>vs Discrétion</h2>
+	                <input type="number" name="attr_defense_stealth_base" value="@{defense_total}+@{focus_current}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_defense_stealth_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_defense_stealth_total" value="@{defense_stealth_base}+@{defense_stealth_bonus}" disabled="true">
+	            </div>
+	        </div>
+	        
+	        <div class="col col2 cover">
+	            <div>
+	                <h1>Couverture</h1>
+	                <input type="number" name="attr_cover_bonus" value="0">
+	            </div>
+	            
+	            <div>
+	                <h2>1. Partielle</h2><span>+2 Def & Action Furtivité</span>
+	            </div>
+	            
+	            <div>
+	                <h2>2. Complète</h2><span>+4 Def & CdT 3+ Deg End -2</span>
+	            </div>
+	            
+	            <div>
+	                <h2>3. Retranché</h2><span>+6 Def & Pas de CC</span>
+	            </div>
+	        </div>
+	        
+	        <div class="col col3 armor">
+	            <div>
+	                <h1>Armure</h1>
+	                <input type="number" name="attr_armor_base" value="-1" disabled="true"><span> + </span>
+	                <input type="number" name="attr_armor_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_armor_total" value="@{armor_base}+@{armor_bonus}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2>vs Énergie</h2>
+	                <input type="number" name="attr_armor_energy_bonus" value="0">
+	            </div>
+	            
+	            <div>
+	                <h2>vs Ralentissement</h2>
+	                <input type="number" name="attr_armor_slow_bonus" value="0">
+	            </div>
+	            
+	            <div>
+	                <h2>À Endurance 0</h2>
+	                <input type="number" name="attr_armor_endurance_bonus" value="0">
+	            </div>
+	        </div>
+	        
+	        <div class="col col4 endurance">
+	            <div>
+	                <h1>Endurance Max</h1>
+	                <input type="number" name="attr_endurance_base" value="10+5*@{strength_current}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_endurance_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_endurance_total" value="@{endurance_base}+@{endurance_bonus}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2 style="width: 68%;">Endurance Actuelle</h2>
+	                <input type="number" name="attr_endurance_current" value="0"><span>  /  </span>
+	                <input type="number" name="attr_endurance_current_total" value="@{endurance_total}" disabled="true">
+	            </div>
+	            
+	            <div>
+	                <h2>Recovery</h2>
+	                <input type="number" name="attr_recovery_base" value="@{focus_current}" disabled="true"><span> + </span>
+	                <input type="number" name="attr_recovery_bonus" value="0"><span> = </span>
+	                <input type="number" name="attr_recovery_total" value="@{recovery_base}+@{recovery_bonus}" disabled="true">
+	            </div>
+	        </div>
+	    </div>
+	    
+	    <div class="equipements">
+	        
+	        <div class="equipement outfit">
+	            <table>
+	                <thead>
+	                    <tr>
+	                        <td style="width: 18%;"><h1>Tenue</h1></td>
+	                        <td style="width: 4%;"><h2>Armure</h2></td>
+	                        <td style="width: 4%;"><h2>Déf</h2></td>
+	                        <td style="width: 4%;"><h2>End.</h2></td>
+	                        <td style="width: 4%;"><h2>Couv.</h2></td>
+	                        <td style="width: 4%;"><h2>Front.</h2></td>
+	                        <td style="width: 4%;"><h2>Empl.</h2></td>
+	                        <td style="width: 4%;"><h2>Poids</h2></td>
+	                        <td style="width: 30%;"><h2>Variation</h2></td>
+	                        <td style="width: 6%;"><h2>Coût</h2></td>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td><input class="name" type="text" name="attr_outfit_name"></td>
+	                        <td><input type="number" name="attr_outfit_armor"></td>
+	                        <td><input type="number" name="attr_outfit_defense"></td>
+	                        <td><input type="number" name="attr_outfit_endurance"></td>
+	                        <td><input type="number" name="attr_outfit_cover"></td>
+	                        <td><input type="number" name="attr_outfit_front"></td>
+	                        <td><input type="number" name="attr_outfit_slot"></td>
+	                        <td><input type="number" name="attr_outfit_weight"></td>
+	                        <td><input class="variation" type="text" name="attr_outfit_variation"></td>
+	                        <td><input class="cost" type="text" name="attr_outfit_cost"></td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	            
+	            <input type="text" class="comment" name="attr_outfit_comment">
+	        </div>
+	        
+	        <div class="equipement utility">
+	            <table>
+	                <thead>
+	                    <tr>
+	                        <td style="width: 18%;"><h1>Utilitaire</h1></td>
+	                        <td style="width: 4%;"><h2>Armure</h2></td>
+	                        <td style="width: 4%;"><h2>Déf</h2></td>
+	                        <td style="width: 4%;"><h2>End.</h2></td>
+	                        <td style="width: 4%;"><h2>Couv.</h2></td>
+	                        <td style="width: 4%;"><h2>Front.</h2></td>
+	                        <td style="width: 4%;"><h2>Empl.</h2></td>
+	                        <td style="width: 4%;"><h2>Poids</h2></td>
+	                        <td style="width: 30%;"><h2>Variation</h2></td>
+	                        <td style="width: 6%;"><h2>Coût</h2></td>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td><input class="name" type="text" name="attr_utility_name"></td>
+	                        <td><input type="number" name="attr_utility_armor"></td>
+	                        <td><input type="number" name="attr_utility_defense"></td>
+	                        <td><input type="number" name="attr_utility_endurance"></td>
+	                        <td><input type="number" name="attr_utility_cover"></td>
+	                        <td><input type="number" name="attr_utility_front"></td>
+	                        <td><input type="number" name="attr_utility_slot"></td>
+	                        <td><input type="number" name="attr_utility_weight"></td>
+	                        <td><input class="variation" type="text" name="attr_utility_variation"></td>
+	                        <td><input class="cost" type="text" name="attr_utility_cost"></td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	            
+	            <input type="text" class="comment" name="attr_utility_comment">
+	        </div>
+	            
+	    </div>
+	</div>
+    
+    <div class="note">
+        Notes
+    </div>
+</div>
+
+<script type="text/worker">
+    [`core`, `combat`, `note`].forEach(attr => {
+   		on(`clicked:tab_${attr}`, () => {
+   			console.log(`c% The button clicked was tab_${attr} update tab to ${attr}`);
+   			setAttrs({tab: attr});
+   		});
+   });
+</script>
+
+<rolltemplate class="sheet-rolltemplate-skill">
+    <div class="sheet-template-container">
+    	<div class="sheet-template-header">{{skill-name}}</div>
+    	<div class="sheet-template-bonuses">
+        	
+        	{{#rollGreater() trained 0}}
+        	<div class="sheet-template-row">> Entrainement: {{trained}}</div>
+            {{/rollGreater() trained 0}}
+            {{#rollLess() trained 0}}
+        	<div class="sheet-template-row">> Entrainement: {{trained}}</div>
+            {{/rollLess() trained 0}}
+            {{#rollGreater() bonus 0}}
+            <div class="sheet-template-row">> Bonus: {{bonus}}</div>
+            {{/rollGreater() bonus 0}}
+            {{#rollLess() bonus 0}}
+            <div class="sheet-template-row">> Bonus: {{bonus}}</div>
+            {{/rollLess() bonus 0}}
+            
+            {{#rollGreater() modifier 0}}
+            <div class="sheet-template-row">> Modifieur: {{modifier}}</div>
+            {{/rollGreater() modifier 0}}
+            {{#rollLess() modifier 0}}
+            <div class="sheet-template-row">> Modifieur: {{modifier}}</div>
+            {{/rollLess() modifier 0}}
+            
+            {{#tool}}
+            <div class="sheet-template-row">> {{tool-name}}: {{tool}}</div>
+            {{/tool}}
+        </div>
+        <div class="sheet-template-roll">
+            {{roll}}
+        </div>
+        {{#rollWasCrit() roll}}
+        <div class="sheet-template-hit">
+            Coups Puissants
+        </div>
+        {{/rollWasCrit() roll}}
+    </div>
+</rolltemplate>

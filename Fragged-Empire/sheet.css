@@ -211,11 +211,13 @@ button[type="roll"]:hover {
 
 .sheet-attribute input[type=checkbox]{
     position: absolute;
-    left: 130px;
+    left: 27%;
+    top: -2px;
     transform: scale(0.75);
 }
 
 .sheet-attribute {
+    position: relative;
     margin-bottom: 2px;
 }
 
@@ -223,7 +225,7 @@ button[type="roll"]:hover {
     width: 45%;
 }
 
-.sheet-attribute input[type=number]{
+.sheet-core .sheet-attribute input[type=number]{
     width: 5%;
 }
 
@@ -302,71 +304,44 @@ button[type="roll"]:hover {
 .sheet-skills h1 {
     font-size: 18px;
     text-align: center;
-    text-space-collapse: collapse;
+    line-height: 1.5em;
 }
 
-.sheet-legend-skill span{
-    display: inline-block;
-    right: 200px;
-    font-size: 0.5em;
-    text-align: right;
-    float: right;
-    overflow: auto;
-}
-
-/*** Primary Skills ***/
-.sheet-primary-skills {
+.sheet-skills {
     margin-top: 3px;
 }
 
-.sheet-primary-skills input[type=text]{
-    width: 34%;
+.sheet-skills span{
+    font-size: 8px;
+    margin-left: 1px;
 }
 
-.sheet-primary-skills input[type=number]{
-    width: 5%;
+.sheet-skills tr{
+    line-height: 10px;
 }
 
-.sheet-primary-skills button[type=roll]{
-    width: 25%;
+.sheet-skills input[type=text]{
+    width: 95%;
+    margin-left: 3px;
+    font-size: 12px;
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
 }
 
-.sheet-primary-skills input[type=checkbox]{
+.sheet-skills input[type=number]{
+    width: 95%;
+}
+
+.sheet-skills button[type=roll]{
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1px;
+}
+
+.sheet-skills input[type=checkbox]{
     transform: scale(0.75);
-    margin: -3px;
     padding: 0;
     border: 0;
-}
-
-/*** Combat Skill ***/
-.sheet-combat-skills {
-    margin-top: 3px;
-}
-
-.sheet-combat-skills input[type=text]{
-    width: 46%;
-    float: right;
-    margin-top: 2.5px;
-}
-
-.sheet-combat-skills input[type=number]{
-    width: 5%;
-}
-
-.sheet-combat-skills button[type=roll]{
-    width: 25%;
-}
-
-.sheet-combat-skills input[type=checkbox]{
-    transform: scale(0.75);
-    margin: -2.5px;
-    padding: 0;
-    border: 0;
-}
-
-.sheet-personal-skill {
-    display: inline-block;
-    margin-bottom: 3.5px;
 }
 
 /*** Strong hit ***/
@@ -412,10 +387,6 @@ button[type="roll"]:hover {
     width: 10%;
 }
 
-.sheet-combat .sheet-col input[type=number] {
-    width: 9%;
-}
-
 .sheet-combat .sheet-col .sheet-attribute-text,
 .sheet-combat .sheet-col .sheet-fate-text {
     width: 50%;
@@ -459,6 +430,13 @@ button[type="roll"]:hover {
     display: inline-block;
 }
 
+.sheet-attribute input[type=number],
+.sheet-order input[type=number],
+.sheet-overburdened input[type=number], 
+.sheet-stealth input[type=number] {
+    width: 9%;
+}
+
 .sheet-order,
 .sheet-overburdened, 
 .sheet-stealth {
@@ -474,6 +452,160 @@ button[type="roll"]:hover {
 
 .sheet-overburdened span {
     font-size: 8px;
+}
+
+.sheet-scatter {
+    padding-top: 5px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.sheet-scatter .sheet-image {
+    background: url(https://raw.githubusercontent.com/Plenett/character-sheets/master/Fragged-Empire/images/dispersion.PNG) top no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+}
+
+/*** other-stats ***/
+.sheet-other-stats {
+    margin-top: 10px;
+}
+
+.sheet-other-stats .sheet-col{
+    width: 23%;
+}
+
+.sheet-endurance,
+.sheet-armor,
+.sheet-cover,
+.sheet-defense {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-right: 1px solid black;
+}
+
+.sheet-endurance{
+    padding-bottom: 26px;
+    border: 0;
+}
+
+.sheet-cover{
+    padding-bottom: 11px;
+}
+
+.sheet-other-stats input[type=number] {
+    width: 12%;
+}
+
+.sheet-other-stats h1{
+    width: 45%;
+    font-size: 12px;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.sheet-other-stats h2{
+    width: 45%;
+    font-size: 8px;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.sheet-cover h1{
+    width: 60%;
+}
+
+.sheet-cover h2{
+    font-size: 10px;
+    width: 40%;
+}
+
+.sheet-cover span{
+    font-size: 7px;
+}
+
+.sheet-armor h2{
+    width: 81%;
+}
+
+.sheet-endurance h1{
+    width: 48%;
+    font-size: 11px;
+}
+
+.sheet-endurance h2{
+    width: 48%;
+}
+
+/*** Equipement ***/
+.sheet-equipements {
+    margin-top: 20px;
+}
+
+.sheet-equipement {
+    margin-top: 10px;
+}
+
+.sheet-equipement h1{
+    font-size: 15px;
+    line-height: 1em;
+}
+
+.sheet-equipement h2{
+    font-size: 8px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.sheet-equipement input[type=number],
+.sheet-equipement input[type=text]{
+    width: 95%;
+    border-radius: 0;
+    margin: 0 auto;
+}
+
+.sheet-name{
+    width: 99% !important;
+    border-radius: 30px 0 0 30px !important;
+    padding-left: 5px;
+}
+
+.sheet-variation{
+    width: 99% !important;
+    border-radius: 0 30px 30px 0 !important;
+}
+
+.sheet-cost{
+    width: 99% !important;
+    border-radius: 30px !important;
+    text-align: center;
+}
+
+.sheet-equipement .sheet-comment {
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+
+.sheet-natural-weapon input[type=text]:disabled,
+.sheet-natural-weapon input[type=number]:disabled {
+    background-color: #ffffff;
+}
+
+.sheet-ammo {
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    border-radius: 30px !important;
+    display: inline-block;
+    width: 35% !important;
 }
 
 /*** Roll Template ***/
