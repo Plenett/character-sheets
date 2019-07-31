@@ -26,6 +26,7 @@ input[type=number]{
     border: 1px solid black;
     margin: 0;
     padding: 0;
+    width: 20px;
     text-align: center;
     background-color: #fff;
     font-size: 10px;
@@ -71,12 +72,251 @@ button[type="roll"]:hover {
     width: 49%;
 }
 
-/*** Tab ***/
-.sheet-sheet_type[value="pc"] ~ .sheet-tabs {
-	position: relative;
-	margin-bottom: -15%;
+/*** Sheet-tab ***/
+
+.sheet-player,
+.sheet-npc,
+.sheet-ship{
+    display: none;
 }
 
+.sheet-sheet_toggle[value="player"] ~ .sheet-player,
+.sheet-sheet_toggle[value="npc"] ~ .sheet-npc,
+.sheet-sheet_toggle[value="ship"] ~ .sheet-ship,
+.sheet-sheet_toggle[value="drone"] ~ .sheet-drone {
+    display: inline-block;
+}
+
+.sheet-sheet_tabs input[value*="player"] ~ button[name*="player"],
+.sheet-sheet_tabs input[value*="npc"] ~ button[name*="npc"],
+.sheet-sheet_tabs input[value*="ship"] ~ button[name*="ship"],
+.sheet-sheet_tabs input[value*="drone"] ~ button[name*="drone"] {
+	background-color: #fff;
+	border-bottom: none;
+	color: #000;
+}
+
+.sheet-sheet_tabs div:after {
+    border-bottom: 1px solid #000;
+}
+
+.sheet-sheet_tabs div {
+    margin-bottom: 2px;
+    display: inline-block;
+}
+
+.sheet-sheet_tabs button[type="action"] {
+	background-color: #ccc;
+	border: 1px solid #000;
+	color: #777;
+	font-family: sans-serif;
+	font-size: 1em;
+	text-transform: capitalize;
+	margin-right: -5px;
+	width:20%;
+}
+
+/*** NPC ***/
+.sheet-npc .sheet-stats .sheet-col {
+    width: 23%;
+}
+
+.sheet-npc .sheet-stats input[type=number]{
+    width: 9%;
+}
+
+.sheet-npc .sheet-attribute-text{
+    width: 20% !important;
+    font-size: 10px;
+    padding: 1px 0px 2px 5px;
+    margin: 2px 0 2px 0;
+}
+
+.sheet-npc .sheet-fate-text{
+    width: 20%;
+    font-size: 10px;
+    padding: 1px 0px 2px 3px;
+    margin: 5px 0 5px 0;
+}
+
+.sheet-npc .sheet-space {
+    display: inline-block;
+    width: 25%
+}
+
+.sheet-npc .sheet-attributes{
+    width: 30% !important;
+}
+
+.sheet-npc .sheet-attribute{
+    margin: 0;
+}
+
+.sheet-npc .sheet-defense,
+.sheet-npc .sheet-armor,
+.sheet-npc .sheet-endurance{
+    width: 20% !important;
+    border: none;
+    border-left: 1px solid black;
+    margin: 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+.sheet-npc .sheet-defense input[type=number],
+.sheet-npc .sheet-armor input[type=number],
+.sheet-npc .sheet-endurance input[type=number]{
+    width: 12%;
+}
+
+.sheet-npc .sheet-armor h1{
+    width: 45%;
+}
+
+.sheet-npc .sheet-armor h2{
+    width: 84%;
+}
+
+.sheet-npc .sheet-endurance h1{
+    width: 40%;
+}
+
+.sheet-npc .sheet-endurance h2{
+    width: 40%;
+}
+
+.sheet-npc .sheet-endurance-act {
+    display: inline-block;
+    width: 50%;
+    padding-left: 6px;
+}
+
+.sheet-npc .sheet-endurance-act h2 {
+    display: inline-block;
+    font-size: 10px;
+    width: 42%;
+}
+
+.sheet-npc .sheet-endurance-act input[type=number]{
+    width: 18%;
+}
+
+.sheet-npc .sheet-split {
+    margin: 2px 0 2px 0;
+    border-top: 1px solid black;
+}
+
+.sheet-npc .sheet-trait {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sheet-npc .sheet-trait input[type=text] {
+    width: 99%;
+    border-radius: 0;
+}
+
+.sheet-npc .sheet-trait h2 {
+    width: 100%;
+    font-size: 8px;
+    line-height: 1em;
+    padding-left: 12px;
+}
+
+.sheet-npc .sheet-trait h1 {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1em;
+    padding-left: 12px;
+}
+
+/*** Ship ***/
+.sheet-ship .sheet-stats input[type=number]{
+    width: 5%;
+}
+
+.sheet-ship .sheet-stats textarea{
+    height: 53px !important;
+}
+
+.sheet-ship .sheet-stats .sheet-space{
+    width: 7.5%;
+    display: inline-block;
+}
+
+.sheet-ship .sheet-cargo {
+    margin: 10px 0 0px 0;
+}
+
+.sheet-ship .sheet-cargo h1{
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.sheet-ship .sheet-cargo input[type=number]{
+    width: 2.5%;
+}
+
+.sheet-ship .sheet-cargo .sheet-space {
+    width: 10px;
+    display: inline-block;
+}
+
+.sheet-ship .sheet-number{
+    font-size: 9px;
+    text-align: center;
+}
+
+.sheet-drone-number{
+    display: inline-block;
+    border: none !important;
+    border-bottom: 1px solid black !important;
+    width: 5% !important;
+    border-radius: 0 !important;
+    margin-bottom: 3px;
+}
+
+.sheet-ship .sheet-ordnance .sheet-space {
+    width: 39%;
+    display: inline-block;
+}
+
+.sheet-ship .sheet-ordnance .sheet-rounded-number {
+    width: 2.5%;
+}
+
+.sheet-rounded-number{
+    border: 1px solid black;
+    border-radius: 30px !important;
+    display: inline-block;
+}
+
+.sheet-ship .sheet-combat-stats .sheet-col{
+    width: 31%;
+}
+
+.sheet-ship .sheet-combat-stats input[type=number]{
+    width: 20px;
+}
+
+.sheet-ship .sheet-combat-stats h1{
+    font-size: 15px;
+    width: 60%;
+    margin: 5px 0 5px 0;
+}
+
+.sheet-ship .sheet-combat-stats h2{
+    font-size: 11px;
+    display: inline-block;
+    width: 60%;
+    line-height: 1em;
+    margin: 5px 0 5px 0;
+}
+
+.sheet-ship .sheet-endurance {
+    padding-bottom: 0;
+}
+/*** PC-Tab ***/
 .sheet-tabs div:after {
     border-bottom: 1px solid #000;
 }
@@ -106,7 +346,7 @@ button[type="roll"]:hover {
 }
 
 .sheet-core,
-/*.sheet-combat,*/
+.sheet-combat,
 .sheet-note {
     display: none;
 }
@@ -376,6 +616,90 @@ button[type="roll"]:hover {
     font-family: 'Pictos';
 }
 
+.sheet-slots h1{
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 0;
+}
+
+.sheet-slots input[type=number]{
+    width: 13%;
+}
+
+.sheet-slots span{
+    font-size: 8px;
+    margin-left: 1px;
+}
+
+.sheet-slots input[type=text]{
+    width: 95%;
+    margin-bottom: 3px;
+}
+
+.sheet-research-cargo .sheet-col {
+    width: 48%;
+}
+
+.sheet-research-cargo h1{
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    line-height: 0;
+}
+
+.sheet-research-cargo span{
+    font-size: 8px;
+    margin-left: 1px;
+    text-align: center;
+}
+
+.sheet-top-left {
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+
+.sheet-top-right {
+    position: absolute;
+    top: 0;
+    right: 1px;
+}
+
+.sheet-bot-left {
+    position: absolute;
+    bottom: 0;
+    left: 1px;
+}
+
+.sheet-bot-right {
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+}
+
+.sheet-research-cargo table{
+    width: 100%;
+}
+
+.sheet-research {
+    width: 100%;
+    margin-right: 5px;
+}
+
+.sheet-cargo {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.sheet-research-cargo td {
+    text-align: center;
+}
+
+
 /*** PC-combat ***/
 /*** attribute ***/
 .sheet-combat .sheet-stats .sheet-col {
@@ -608,7 +932,17 @@ button[type="roll"]:hover {
     width: 35% !important;
 }
 
+.sheet-drone .sheet-rounded-number {
+    width: 2.5% !important;
+}
+
+.sheet-drone .sheet-space {
+    width: 23%;
+    display: inline-block;
+}
+
 /*** Roll Template ***/
+.sheet-rolltemplate-action .sheet-template-container,
 .sheet-rolltemplate-skill .sheet-template-container {
     background-color:#111111;
     border:4px solid #550000;
@@ -619,6 +953,7 @@ button[type="roll"]:hover {
     margin-right:5%;
 }
 
+.sheet-rolltemplate-action .sheet-template-header,
 .sheet-rolltemplate-skill .sheet-template-header {
     background-color:#444444;
     text-align:center;
@@ -629,7 +964,9 @@ button[type="roll"]:hover {
     border: 2px solid red;
 }
 
-.sheet-rolltemplate-skill .sheet-template-bonuses {
+
+.sheet-rolltemplate-action .sheet-template-bonuses,
+.sheet-rolltemplate-skill .sheet-template-bonuses{
     background-color:#111111;
     width: 90%;
     padding: 8px;
@@ -637,6 +974,7 @@ button[type="roll"]:hover {
     border-top: none;
 }
 
+.sheet-rolltemplate-action .sheet-template-row,
 .sheet-rolltemplate-skill .sheet-template-row {
     text-align:left;
     color:#eebb99;
@@ -644,6 +982,7 @@ button[type="roll"]:hover {
     width: 100%;
 }
 
+.sheet-rolltemplate-action .sheet-template-roll,
 .sheet-rolltemplate-skill .sheet-template-roll {
     background-color:#444444;
     text-align:center;
@@ -655,6 +994,7 @@ button[type="roll"]:hover {
     border-top: none;
 }
 
+.sheet-rolltemplate-action .sheet-template-hit,
 .sheet-rolltemplate-skill .sheet-template-hit {
     background-color:#444444;
     text-align:center;
@@ -666,6 +1006,7 @@ button[type="roll"]:hover {
     border-top: none;
 }
 
+.sheet-rolltemplate-action .inlinerollresult,
 .sheet-rolltemplate-skill .inlinerollresult {
     border: none;
     background: none;

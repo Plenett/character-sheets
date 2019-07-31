@@ -1,4 +1,635 @@
-<div class="container">
+<input class="sheet_toggle" name="attr_sheet" type="hidden" value="options" />
+<div class="sheet_tabs tab-col">
+	<input type="hidden" name="attr_sheet" value="npc"/>
+	<button type="action" name="act_sheet_player" title="@{sheet}">Joueur</button>
+	<button type="action" name="act_sheet_ship" title="@{sheet}">Vaisseau</button>
+	<button type="action" name="act_sheet_npc" title="@{sheet}">PNJ</button>
+</div>
+
+<div class="npc container">
+    <div class="stats other-stats">
+	    <div class="col col1 attributes">
+	        <div class="attribute">
+                <div class="attribute-text">1 FOR</div>
+                <input class="strength-base" type="number" name="attr_strength_current" value="0"><span> / </span>
+                <input type="number" name="attr_strength_current_total" value="0">
+                <div class="attribute-text">4 CON</div>
+                <input class="focus-base" type="number" name="attr_focus_current" value="0"><span> / </span>
+                <input type="number" name="attr_focus_current_total" value="0">
+	        </div>
+			
+			<div class="attribute">
+                <div class="attribute-text">2 REF</div>
+                <input class="reflexes-base" type="number" name="attr_reflexes_current" value="0"><span> / </span>
+                <input type="number" name="attr_reflexes_current_total" value="0">
+                <div class="attribute-text">5 INT</div>
+                <input class="intelligence-base" type="number" name="attr_intelligence_current" value="0"><span> / </span>
+                <input type="number" name="attr_intelligence_current_total" value="0">
+	        </div>
+			
+			<div class="attribute">
+                <div class="attribute-text">3 MVT</div>
+                <input class="movement-base" type="number" name="attr_movement_current" value="0"><span> / </span>
+                <input type="number" name="attr_movement_current_total" value="0">
+                <div class="attribute-text">6 PER</div>
+                <input class="perception-base" type="number" name="attr_perception_current" value="0"><span> / </span>
+                <input type="number" name="attr_perception_current_total" value="0">
+	        </div>
+	       
+			<div class="attribute">
+                <div class="fate-text">Destin</div>
+                <input class="fate-base" type="number" name="attr_fate_current" value="0"><span> / </span>
+                <input type="number" name="attr_fate_current_total" value="0">
+                <div class="endurance-act">
+                    <h2>End. Act.</h2>
+                    <input type="number" name="attr_endurance_current" value="0"><span style="margin: 1px 0 0 1px"> / </span>
+                    <input type="number" name="attr_endurance_current_total_npc" value="@{endurance_total_npc}" disabled="true">
+                </div>
+	        </div>
+	    </div>
+	    
+	    <div class="col col2 defense">
+            <div>
+                <h1>Défense</h1>
+                <input type="number" name="attr_defense_base" value="10+@{reflexes_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_total" value="@{defense_base}+@{defense_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Handicap</h2>
+                <input type="number" name="attr_defense_handicap_base" value="@{defense_total}+@{strength_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_handicap_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_handicap_total" value="@{defense_handicap_base}+@{defense_handicap_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Psionique</h2>
+                <input type="number" name="attr_defense_psionic_base" value="@{defense_total}+@{focus_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_psionic_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_psionic_total" value="@{defense_psionic_base}+@{defense_psionic_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Discrétion</h2>
+                <input type="number" name="attr_defense_stealth_base" value="@{defense_total}+@{perception_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_stealth_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_stealth_total" value="@{defense_stealth_base}+@{defense_stealth_bonus}" disabled="true">
+            </div>
+        </div>
+        
+        <div class="col col3 armor">
+            <div>
+                <h1>Armure</h1>
+                <input type="number" name="attr_armor_base_npc" value="0"><span> + </span>
+                <input type="number" name="attr_armor_bonus_npc" value="0"><span> = </span>
+                <input type="number" name="attr_armor_total_npc" value="@{armor_base_npc}+@{armor_bonus_npc}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Énergie</h2>
+                <input type="number" name="attr_armor_energy_bonus" value="0">
+            </div>
+            
+            <div>
+                <h2>vs Ralentissement</h2>
+                <input type="number" name="attr_armor_slow_bonus" value="0">
+            </div>
+            
+            <div>
+                <h2>À Endurance 0</h2>
+                <input type="number" name="attr_armor_endurance_bonus" value="0">
+            </div>
+        </div>
+        
+        <div class="col col4 endurance">
+            <div>
+                <h1>End. Max</h1>
+                <input type="number" name="attr_endurance_base_npc" value="10+5*@{strength_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_endurance_bonus_npc" value="0"><span> = </span>
+                <input type="number" name="attr_endurance_total_npc" value="@{endurance_base_npc}+@{endurance_bonus_npc}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>Récupération</h2>
+                <input type="number" name="attr_recovery_base_npc" value="@{focus_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_recovery_bonus_npc" value="0"><span> = </span>
+                <input type="number" name="attr_recovery_total_npc" value="@{recovery_base_npc}+@{recovery_bonus_npc}" disabled="true">
+            </div>
+            
+            <div class="split"></div>
+            
+            <div>
+                <h2>Discrétion</h2>
+                <input type="number" name="attr_stealth_base_npc" value="2+@{reflexes_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_stealth_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_stealth_total_npc" value="@{stealth_base_npc}+@{stealth_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>Ordre Combat</h2>
+                <input type="number" name="attr_order_base" value="@{intelligence_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_order_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_order_total" value="@{order_base}+@{order_bonus}" disabled="true">
+            </div>
+        </div>
+    </div>
+    
+    <div class="equipement weapon">
+        <table>
+            <tr>
+                <td style="width: 18%;"><h1>Armes</h1></td>
+                <td style="width: 4%;"><h2>Hit</h2></td>
+                <td style="width: 4%;"><h2>End Dmg</h2></td>
+                <td style="width: 4%;"><h2>Crit Dmg</h2></td>
+                <td style="width: 4%;"><h2>Range</h2></td>
+                <td style="width: 4%;"><h2>Clips</h2></td>
+                <td style="width: 4%;"><h2>Ammo</h2></td>
+                <td style="width: 4%;"><h2>Load</h2></td>
+                <td style="width: 4%;"><h2>RoF</h2></td>
+                <td style="width: 4%;"><h2>Weight</h2></td>
+                <td style="width: 22%;"><h2>Variations</h2></td>
+                <td style="width: 6%;"><h2>Cost</h2></td>
+            </tr>
+        </table>
+        <fieldset class="repeating_weapon">
+            <table>
+                <tr>
+                    <td style="width: 18%;"><input class="name" type="text" name="attr_weapon_name"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_hit"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_endurance"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_critical"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_range"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_clips_max"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_ammo_max"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_load"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_rof"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_weight"></td>
+                    <td style="width: 22%;"><input class="variation" type="text" name="attr_weapon_variation"></td>
+                    <td style="width: 6%;"><input class="cost" type="text" name="attr_weapon_cost"></td>
+                </tr>
+                <tr>
+                    <td colspan="11"><input type="text" class="comment" name="attr_weapon_comment"></td>
+                    <td>
+                        <input class="ammo" type="number" name="attr_weapon_ammo_current"><span style="margin-left: 1px; margin-right: -1px;">/</span>
+                        <input class="ammo" type="number" name="attr_weapon_clips_current">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="trait">
+        <table>
+            <tr>
+                <td style="width: 145px;"><h1>Race/Traits</h1></td>
+                <td style="width: 121px;"><h2>Prérequis</h2></td>
+                <td style="width: 258px;"><h2>Avantages</h2></td>
+                <td style="width: 226px;"><h2>Désavantages</h2></td>
+            </tr>
+        </table>
+        
+        <fieldset class="repeating_trait">
+            <table>
+                <tr>
+                    <td style="width: 18%;"><input class="name" type="text" name="attr_trait_name"></td>
+                    <td style="width: 15%;"><input type="text" name="attr_trait_require"></td>
+                    <td style="width: 32%;"><input type="text" name="attr_trait_advantage"></td>
+                    <td style="width: 28%;"><input class="variation" type="text" name="attr_trait_disadvantage"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="strong-hit">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 15%"><h1>Coup Puissant</h1></td>
+                <td style="width: 25%"><h1>Prérequis</h1></td>
+                <td style="width: 55%"><h1>Effet(s)</h1></td>
+            </tr>
+            
+            <tr>
+                <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat1_name" value="Coup Critique" disabled="true"></td>
+                <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat1_requirements" value="Dégât, Toucher 1/CdT" disabled="true"></td>
+                <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat1_effect" value="Deg. Crit. - Armure = Deg. Attribut Aléatoire (1d6)" disabled="true"></td>
+            </tr>
+            
+            <tr>
+                <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat2_name" value="Amélioration Critique" disabled="true"></td>
+                <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat2_requirements" value="Dégât, Pas de Toucher requis" disabled="true"></td>
+                <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat2_effect" value="+1 Deg. Crit. pour cette attaque contrs Cibles avec Endurance 0" disabled="true"></td>
+            </tr>
+        </table>
+    
+
+        <fieldset class="repeating_strong-hit-npc">
+            <table>
+                <tr>
+                    <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                    <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat_name"></td>
+                    <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat_requirements"></td>
+                    <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat_effect"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+
+<div class="ship container">
+    
+    <div class="header">
+        <div class="logo"></div>
+        <div class="info-box">
+            <div class="info-line">
+                <div class="info-block" style="width: 55%;">
+                    <input type="text" name="attr_character_name" placeholder="Faucon Millenium" title="@{character_name}"/>
+                    <h1>Nom du Vaisseau</h1>
+                </div>
+                <div class="info-block" style="width: 43%;">
+                    <input type="text" name="attr_character_player" placeholder="Han Solo" title="@{player}"/>
+                    <h1>Joueurs</h1>
+                </div>
+            </div>
+            <div class="info-line">
+                <div class="info-block" style="width: 30%;">
+                    <input type="text" name="attr_character_build" placeholder="Kaltoriens" title="@{character_build}"/>
+                    <h1>Structure</h1>
+                </div>
+                <div class="info-block" style="width: 30%;">
+                    <input type="text" name="attr_character_influence" placeholder="15" title="@{character_race}"/>
+                    <h1>Coût d'Influence</h1>
+                </div>
+                <div class="info-block" style="width: 11%;">
+                    <input type="text" name="attr_character_height" placeholder="5 m" title="@{character_height}"/>
+                    <h1>Hauteur</h1>
+                </div>
+                <div class="info-block" style="width: 11%;">
+                    <input type="text" name="attr_character_width" placeholder="5 m" title="@{character_width}"/>
+                    <h1>Largeur</h1>
+                </div>
+                <div class="info-block" style="width: 11%;">
+                    <input type="text" name="attr_character_length" placeholder="30 m" title="@{character_length}"/>
+                    <h1>Longueur</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="stats">
+        <div class="col col1 attributes">
+	        <div class="attribute">
+	            <div class="attribute-text">1. Coque</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_hull_current" value="0"><span> / </span>
+                <input type="number" name="attr_hull_total" value="0">
+                <input type="text" name="attr_hull_trait">
+	        </div>
+	        
+	        <div class="attribute">
+	            <div class="attribute-text">2. Moteurs</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_engines_current" value="0"><span> / </span>
+                <input type="number" name="attr_engines_total" value="0">
+                <input type="text" name="attr_engines_trait">
+	        </div>
+	        
+	        <div class="attribute">
+	            <div class="attribute-text">3. Équipage</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_crew_current" value="0"><span> / </span>
+                <input type="number" name="attr_crew_total" value="0">
+                <input type="text" name="attr_crew_trait">
+	        </div>
+	        
+	        <div class="attribute">
+	            <div class="attribute-text">4. Puissance</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_power_current" value="0"><span> / </span>
+                <input type="number" name="attr_power_total" value="0">
+                <input type="text" name="attr_power_trait">
+	        </div>
+	        
+	        <div class="attribute">
+	            <div class="attribute-text">5. Processeurs</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_cpu_current" value="0"><span> / </span>
+                <input type="number" name="attr_cpu_total" value="0">
+                <input type="text" name="attr_cpu_trait">
+	        </div>
+	        
+	        <div class="attribute">
+	            <div class="attribute-text">6. Senseurs</div>
+	            <div class="space"></div>
+                <input type="number" name="attr_sensors_current" value="0"><span> / </span>
+                <input type="number" name="attr_sensors_total" value="0">
+                <input type="text" name="attr_sensors_trait">
+	        </div>
+			
+			<div class="attribute">
+	            <div class="fate-text">Taille</div>
+	            <input type="number" name="attr_size_base" value="3" disabled="true"><span> + </span>
+                <input type="number" name="attr_size_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_size_total" value="(@{size_base}+@{size_bonus})" disabled="true">
+                <input type="text" name="attr_size_trait">
+	        </div>
+	    </div>
+	    
+	    <div class="col col2">
+	        <div class="advantage">
+	            <h1>Avantages</h1>
+	            <textarea name="attr_advantages" cols="1" rows="1"></textarea>
+	        </div>
+	        <div class="advantage">
+	            <h1>Conditions</h1>
+	            <textarea name="attr_conditions" cols="1" rows="1"></textarea>
+	        </div>
+	    </div>
+    </div>
+    
+    <div class="cargo">
+        <h1>Cargaison</h1>
+        <input type="number" name="attr_cargo_base" value="4*@{size_total}+@{hull_total}-10" disabled="true"><span>+</span>
+        <input type="number" name="attr_cargo_bonus" value="0"><span>=</span>
+        <input type="number" name="attr_cargo_total" value="@{cargo_base}+@{cargo_bonus}" disabled="true">
+        <div class="space"></div>
+        <h1>Cargaison Secrète</h1>
+        <input type="number" name="attr_cargo_secret" value="0">
+        <div class="space"></div>
+        <h1>Emplacements</h1>
+        <input type="number" name="attr_slot_base" value="@{size_total}" disabled="true"><span>+</span>
+        <input type="number" name="attr_slot_bonus" value="0"><span>=</span>
+        <input type="number" name="attr_slot_total" value="@{slot_base}+@{slot_bonus}" disabled="true">
+        <div class="space"></div>
+        <h1>Vitesse Max</h1>
+        <input type="number" name="attr_speed_max" value="6">
+        <div class="space"></div>
+        <h1>Ravitaillement</h1>
+        <input type="number" name="attr_resupply_base" value="2*@{size_total}" disabled="true"><span>+</span>
+        <input type="number" name="attr_resupply_bonus" value="0"><span>=</span>
+        <input type="number" name="attr_resupply_total" value="@{resupply_base}+@{resupply_bonus}" disabled="true">
+    </div>
+    
+    <div class="combat-stats">
+        <div class="col col1 defense">
+            <div>
+                <h1>Défense</h1>
+                <input type="number" name="attr_defense_base_ship" value="12-@{size_total}+@{engines_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_bonus_ship" value="0"><span> = </span>
+                <input type="number" name="attr_defense_total_ship" value="@{defense_base_ship}+@{defense_bonus_ship}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Ogives/Chasseurs</h2>
+                <input type="number" name="attr_defense_ordnance_base" value="@{defense_total_ship}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_ordnance_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_ordnance_total" value="@{defense_ordnance_base}+@{defense_ordnance_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Abordage</h2>
+                <input type="number" name="attr_defense_boarding_base" value="10+@{size_total}+@{crew_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_defense_boarding_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_defense_boarding_total" value="@{defense_boarding_base}+@{defense_boarding_bonus}" disabled="true">
+            </div>
+        </div>
+        
+        <div class="col col2 armor">
+            <div>
+                <h1>Armure</h1>
+                <input type="number" name="attr_armor_base_ship" value="3"><span> + </span>
+                <input type="number" name="attr_armor_bonus_ship" value="0"><span> = </span>
+                <input type="number" name="attr_armor_total_ship" value="@{armor_base_ship}+@{armor_bonus_ship}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>vs Abordage</h2>
+                <input type="number" name="attr_armor_boarding_base" value="0" disabled="true"><span> + </span>
+                <input type="number" name="attr_armor_boarding_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_armor_boarding_total" value="@{armor_boarding_base}+@{armor_boarding_bonus}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>À Bouclier 0</h2>
+                <input type="number" name="attr_armor_shield_bonus" value="-1" disabled="true">
+            </div>
+        </div>
+        
+        <div class="col col3 endurance">
+            <div>
+                <h1>Bouclier Max</h1>
+                <input type="number" name="attr_endurance_base_ship" value="10+@{size_total}*@{power_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_endurance_bonus_ship" value="0"><span> = </span>
+                <input type="number" name="attr_endurance_total_ship" value="@{endurance_base_ship}+@{endurance_bonus_ship}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>Bouclier Act</h2>
+                <input type="number" name="attr_endurance_current_ship" value="0"><span> / </span>
+                <input type="number" name="attr_endurance_current_total_ship" value="@{endurance_total_ship}" disabled="true">
+            </div>
+            
+            <div>
+                <h2>Récupération</h2>
+                <input type="number" name="attr_recovery_base" value="@{power_current}" disabled="true"><span> + </span>
+                <input type="number" name="attr_recovery_bonus" value="0"><span> = </span>
+                <input type="number" name="attr_recovery_total" value="@{recovery_base}+@{recovery_bonus}" disabled="true">
+            </div>
+        </div>
+    </div>
+   
+    <div class="equipement natural-weapon">
+        <table>
+            <thead>
+                <tr>
+                    <td style="width: 18%;"><h1>Arme Naturelle</h1></td>
+                    <td style="width: 4%;"><h2>Hit</h2></td>
+                    <td style="width: 4%;"><h2>End Dmg</h2></td>
+                    <td style="width: 4%;"><h2>Crit Dmg</h2></td>
+                    <td style="width: 4%;"><h2>Range</h2></td>
+                    <td style="width: 4%;"><h2>Clips</h2></td>
+                    <td style="width: 4%;"><h2>Ammo</h2></td>
+                    <td style="width: 4%;"><h2>Load</h2></td>
+                    <td style="width: 4%;"><h2>RoF</h2></td>
+                    <td style="width: 4%;"><h2>Mount</h2></td>
+                    <td style="width: 22%;"><h2>Variations</h2></td>
+                    <td style="width: 6%;"><h2>Cost</h2></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="name" type="text" name="attr_natural1_name" value="Escouade d'abordage" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_hit" value="@{crew_current}" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_endurance" value="0" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_critical" value="1" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_range" value="0" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_clips" value="0" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_ammo" value="0" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_load" value="0" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_rof" value="1" disabled="true"></td>
+                    <td><input type="number" name="attr_natural1_weight" value="0" disabled="true"></td>
+                    <td><input class="variation" type="text" name="attr_natural1_variation" value="Abordage" disabled="true"></td>
+                    <td><input class="cost" type="text" name="attr_natural1_cost" value="Auto" disabled="true"></td>
+                </tr>
+                <tr>
+                    <td colspan="12"><input type="text" class="comment" name="attr_natural1_comment" value="Pas de Variations ou de Modifications" disabled="true"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="equipement weapon">
+        <table>
+            <tr>
+                <td style="width: 18%;"><h1>Armes</h1></td>
+                <td style="width: 4%;"><h2>Hit</h2></td>
+                <td style="width: 4%;"><h2>Shld Dmg</h2></td>
+                <td style="width: 4%;"><h2>Crit Dmg</h2></td>
+                <td style="width: 4%;"><h2>Range</h2></td>
+                <td style="width: 4%;"><h2>Clips</h2></td>
+                <td style="width: 4%;"><h2>Ammo</h2></td>
+                <td style="width: 4%;"><h2>Load</h2></td>
+                <td style="width: 4%;"><h2>RoF</h2></td>
+                <td style="width: 4%;"><h2>Mount</h2></td>
+                <td style="width: 22%;"><h2>Variations</h2></td>
+                <td style="width: 6%;"><h2>Cost</h2></td>
+            </tr>
+        </table>
+        <fieldset class="repeating_weapon">
+            <table>
+                <tr>
+                    <td style="width: 18%;"><input class="name" type="text" name="attr_weapon_name"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_hit"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_endurance"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_critical"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_range"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_clips_max"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_ammo_max"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_load"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_rof"></td>
+                    <td style="width: 4%;"><input type="number" name="attr_weapon_weight"></td>
+                    <td style="width: 22%;"><input class="variation" type="text" name="attr_weapon_variation"></td>
+                    <td style="width: 6%;"><input class="cost" type="text" name="attr_weapon_cost"></td>
+                </tr>
+                <tr>
+                    <td colspan="11"><input type="text" class="comment" name="attr_weapon_comment"></td>
+                    <td>
+                        <input class="ammo" type="number" name="attr_weapon_ammo_current"><span style="margin-left: 1px; margin-right: -1px;">/</span>
+                        <input class="ammo" type="number" name="attr_weapon_clips_current">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="equipement ordnance">
+        <table>
+            <tr>
+                <td style="width: 18%;"><h1>Ogives/Chasseurs</h1></td>
+                <td style="width: 4%;"><h2>Hit</h2></td>
+                <td style="width: 4%;"><h2>Shld Dmg</h2></td>
+                <td style="width: 4%;"><h2>Crit Dmg</h2></td>
+                <td style="width: 4%;"><h2>Range</h2></td>
+                <td style="width: 4%;"><h2>Clips</h2></td>
+                <td style="width: 4%;"><h2>Ammo</h2></td>
+                <td style="width: 4%;"><h2>Load</h2></td>
+                <td style="width: 4%;"><h2>RoF</h2></td>
+                <td style="width: 4%;"><h2>Mount</h2></td>
+                <td style="width: 22%;"><h2>Variations</h2></td>
+                <td style="width: 6%;"><h2>Cost</h2></td>
+            </tr>
+        </table>
+        <fieldset class="repeating_ordnance">
+            <table>
+                <tr>
+                    <td style="width: 18%;"><input class="name" type="text" name="attr_ordnance_name"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_hit"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_endurance"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_critical"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_range"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_clips_max"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_ammo_max"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_load"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_rof"></td>
+                    <td style="width: 4%;"><input class="number" type="text" name="attr_ordnance_weight"></td>
+                    <td style="width: 22%;"><input class="variation" type="text" name="attr_ordnance_variation"></td>
+                    <td style="width: 6%;"><input class="cost" type="text" name="attr_ordnance_cost"></td>
+                </tr>
+                <tr style="line-height: 2em;">
+                    <td colspan="12">
+                        <span>Defense:</span>
+                        <input class="drone-number" type="number" name="attr_ordnance_defence">
+                        <span>Armure:</span>
+                        <input class="drone-number" type="number" name="attr_ordnance_armor">
+                        <span>Mouvement:</span>
+                        <input class="drone-number" type="number" name="attr_ordnance_movement">
+                        <span>Corps:</span>
+                        <input class="drone-number" type="number" name="attr_ordnance_bodies">
+                        <div class="space"></div>
+                        <span>Corps Restant</span>
+                        <input class="rounded-number" type="number" name="attr_ordnance_bodies_current"><span>/</span>
+                        <input class="rounded-number" type="number" name="attr_ordnance_bodies_max" value="@{ordnance_bodies}" disabled="true">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12"><input type="text" class="comment" name="attr_weapon_comment"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="strong-hit">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 2%"></td>
+                <td style="width: 15%"><h1>Coup Puissant</h1></td>
+                <td style="width: 25%"><h1>Prérequis</h1></td>
+                <td style="width: 55%"><h1>Effet(s)</h1></td>
+            </tr>
+            
+            <tr>
+                <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                <td style="width: 15%;"><input type="text" name="attr_strong-hit-skill1_name" value="Effort" disabled="true"></td>
+                <td style="width: 25%;"><input type="text" name="attr_strong-hit-skill1_requirements" value="N'exige pas de réussite" disabled="true"></td>
+                <td style="width: 55%;"><input type="text" name="attr_strong-hit-skill1_effect" value="Vous pouvez relancer un seul Dé de ce Test de Compétence" disabled="true"></td>
+            </tr>
+            
+            <tr>
+                <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat1_name" value="Coup Critique" disabled="true"></td>
+                <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat1_requirements" value="Dégât, Toucher 1/CdT" disabled="true"></td>
+                <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat1_effect" value="Deg. Crit. - Armure = Deg. Attribut Aléatoire (1d6)" disabled="true"></td>
+            </tr>
+            
+            <tr>
+                <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat2_name" value="Amélioration Critique" disabled="true"></td>
+                <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat2_requirements" value="Dégât, Pas de Toucher requis" disabled="true"></td>
+                <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat2_effect" value="+1 Deg. Crit. pour cette attaque contrs Cibles avec Endurance 0" disabled="true"></td>
+            </tr>
+        </table>
+
+        <fieldset class="repeating_strong-hit">
+            <table>
+                <tr>
+                    <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
+                    <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat_name"></td>
+                    <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat_requirements"></td>
+                    <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat_effect"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    <div class="cargo-list">
+        
+    </div>
+</div>
+
+<div class="player container">
     
     <div class="header">
         <div class="logo"></div>
@@ -22,17 +653,9 @@
                     <input type="text" name="attr_character_gender" placeholder="Homme" title="@{character_gender}"/>
                     <h1>Genre</h1>
                 </div>
-                <div class="info-block" style="width: 17%;">
-                    <input type="text" name="attr_character_weight" placeholder="70 kg" title="@{character_weight}"/>
-                    <h1>Poids</h1>
-                </div>
-                <div class="info-block" style="width: 17%;">
-                    <input type="text" name="attr_character_height" placeholder="1.65 m" title="@{character_height}"/>
-                    <h1>Taille</h1>
-                </div>
-                <div class="info-block" style="width: 12%;">
-                    <input type="text" name="attr_character_age" placeholder="25 ans" title="@{character_age}"/>
-                    <h1>Age</h1>
+                <div class="info-block" style="width: 49%;">
+                    <input type="text" name="attr_character_languages" placeholder="Corp, Kaltorien" title="@{character_languages}"/>
+                    <h1>Langues</h1>
                 </div>
             </div>
         </div>
@@ -661,7 +1284,7 @@
             </table>
         
 
-            <fieldset class="repeating_strong-hit">
+            <fieldset class="repeating_strong-hit-skill">
                 <table>
                     <tr>
                         <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
@@ -671,6 +1294,152 @@
                     </tr>
                 </table>
             </fieldset>
+	    </div>
+	    
+	    <div class="slots">
+	        <table>
+	            <tr>
+	                <td style="width: 20%;"><h1>Emplacements</h1><br/></td>
+	                <td style="width: 20%;">
+	                    <div style="margin: 0 auto;">
+	                        <span>1 Emp./Pds</span>
+	                        <input type="number" name="attr_slot_base" value="@{outfit_slot}+@{utility_slot}" disabled="true"><span>+</span>
+	                        <input type="number" name="attr_slot_bonus" value="0"><span>=</span>
+	                        <input type="number" name="attr_slot_total" value="@{slot_base}+@{slot_bonus}" disabled="true">
+                        </div>
+	                </td>
+	                <td style="width: 20%;"></td>
+	                <td style="width: 20%;"><input type="text" name="attr_gauntlet1" placeholder="Gant de protection 1"></td>
+	                <td style="width: 20%;"><input type="text" name="attr_gauntlet2" placeholder="Gant de protection 2"></td>
+	            </tr>
+	            <tr>
+	                <td><input type="text" name="attr_slot1" placeholder="1)"></td>
+	                <td><input type="text" name="attr_slot2" placeholder="2)"></td>
+	                <td><input type="text" name="attr_slot3" placeholder="3)"></td>
+	                <td><input type="text" name="attr_slot4" placeholder="4)"></td>
+	                <td><input type="text" name="attr_slot5" placeholder="5)"></td>
+	            </tr>
+	            <tr>
+	                <td><input type="text" name="attr_slot6" placeholder="6)"></td>
+	                <td><input type="text" name="attr_slot7" placeholder="7)"></td>
+	                <td><input type="text" name="attr_slot8" placeholder="8)"></td>
+	                <td><input type="text" name="attr_slot9" placeholder="9)"></td>
+	                <td><input type="text" name="attr_slot10" placeholder="10)"></td>
+	            </tr>
+	            <tr>
+	                <td><input type="text" name="attr_slot11" placeholder="11)"></td>
+	                <td><input type="text" name="attr_slot12" placeholder="12)"></td>
+	                <td><input type="text" name="attr_slot13" placeholder="13)"></td>
+	                <td><input type="text" name="attr_slot14" placeholder="14)"></td>
+	                <td><input type="text" name="attr_slot15" placeholder="15)"></td>
+	            </tr>
+	        </table>
+	    </div>
+	    
+	    <div class="research-cargo">
+    	    <div class="col col1 research">
+    	        <table>
+    	            <tr>
+    	                <td style="width: 75%;"><h1 style="width: 84%;">Recherches</h1> <span style="text-align: left;">Atelier</span></td>
+    	                <td style="width: 7%;"><span>Établi</span></td>
+    	                <td style="width: 7%;"><span>Atelier</span></td>
+    	                <td style="width: 7%;"><span>Atelier</span></td>
+    	                <td style="width: 7%;"><span>Dédié</span></td>
+    	            </tr>
+    	        </table>
+    	        
+    	        <fieldset class="repeating_research">
+                    <table>
+                        <tr>
+                            <td style="width: 68%;"><input style="width:253px; margin-right: 7px;" type="text" name="attr_research_name"></td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_research_1_1">
+                                    <input class="top-right" type="checkbox" name="attr_research_1_2">
+                                    <input class="bot-left" type="checkbox" name="attr_research_1_3">
+                                    <input class="bot-right" type="checkbox" name="attr_research_1_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_research_2_1">
+                                    <input class="top-right" type="checkbox" name="attr_research_2_2">
+                                    <input class="bot-left" type="checkbox" name="attr_research_2_3">
+                                    <input class="bot-right" type="checkbox" name="attr_research_2_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_research_3_1">
+                                    <input class="top-right" type="checkbox" name="attr_research_3_2">
+                                    <input class="bot-left" type="checkbox" name="attr_research_3_3">
+                                    <input class="bot-right" type="checkbox" name="attr_research_3_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_research_4_1">
+                                    <input class="top-right" type="checkbox" name="attr_research_4_2">
+                                    <input class="bot-left" type="checkbox" name="attr_research_4_3">
+                                    <input class="bot-right" type="checkbox" name="attr_research_4_4">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+    	    </div>
+    	    
+    	    <div class="col col2 cargo">
+    	        <table>
+    	            <tr>
+    	                <td style="width: 68%;"><h1 style="width: 75%;">Marchandises</h1> <span style="text-align: left;">Cargaison</span></td>
+    	                <td style="width: 7%;"><span>1</span></td>
+    	                <td style="width: 7%;"><span>2</span></td>
+    	                <td style="width: 7%;"><span>3</span></td>
+    	                <td style="width: 7%;"><span>4</span></td>
+    	            </tr>
+    	        </table>
+    	        
+    	        <fieldset class="repeating_cargo">
+                    <table>
+                        <tr style="width:100%;">
+                            <td style="width: 68%;"><input style="width:253px; margin-right: 7px;" type="text" name="attr_cargo_name"></td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_cargo_1_1">
+                                    <input class="top-right" type="checkbox" name="attr_cargo_1_2">
+                                    <input class="bot-left" type="checkbox" name="attr_cargo_1_3">
+                                    <input class="bot-right" type="checkbox" name="attr_cargo_1_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_cargo_2_1">
+                                    <input class="top-right" type="checkbox" name="attr_cargo_2_2">
+                                    <input class="bot-left" type="checkbox" name="attr_cargo_2_3">
+                                    <input class="bot-right" type="checkbox" name="attr_cargo_2_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_cargo_3_1">
+                                    <input class="top-right" type="checkbox" name="attr_cargo_3_2">
+                                    <input class="bot-left" type="checkbox" name="attr_cargo_3_3">
+                                    <input class="bot-right" type="checkbox" name="attr_cargo_3_4">
+                                </div>
+                            </td>
+                            <td style="width: 7%;">
+                                <div style="position: relative;">
+                                    <input class="top-left" type="checkbox" name="attr_cargo_4_1">
+                                    <input class="top-right" type="checkbox" name="attr_cargo_4_2">
+                                    <input class="bot-left" type="checkbox" name="attr_cargo_4_3">
+                                    <input class="bot-right" type="checkbox" name="attr_cargo_4_4">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+    	    </div>
 	    </div>
 	</div>
 	
@@ -887,13 +1656,13 @@
 	                <tbody>
 	                    <tr>
 	                        <td><input class="name" type="text" name="attr_outfit_name"></td>
-	                        <td><input type="number" name="attr_outfit_armor"></td>
-	                        <td><input type="number" name="attr_outfit_defense"></td>
-	                        <td><input type="number" name="attr_outfit_endurance"></td>
-	                        <td><input type="number" name="attr_outfit_cover"></td>
-	                        <td><input type="number" name="attr_outfit_front"></td>
-	                        <td><input type="number" name="attr_outfit_slot"></td>
-	                        <td><input type="number" name="attr_outfit_weight"></td>
+	                        <td><input type="number" name="attr_outfit_armor" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_defense" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_endurance" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_cover" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_front" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_slot" value="0"></td>
+	                        <td><input type="number" name="attr_outfit_weight" value="0"></td>
 	                        <td><input class="variation" type="text" name="attr_outfit_variation"></td>
 	                        <td><input class="cost" type="text" name="attr_outfit_cost"></td>
 	                    </tr>
@@ -923,13 +1692,13 @@
 	                <tbody>
 	                    <tr>
 	                        <td><input class="name" type="text" name="attr_utility_name"></td>
-	                        <td><input type="number" name="attr_utility_armor"></td>
-	                        <td><input type="number" name="attr_utility_defense"></td>
-	                        <td><input type="number" name="attr_utility_endurance"></td>
-	                        <td><input type="number" name="attr_utility_cover"></td>
-	                        <td><input type="number" name="attr_utility_front"></td>
-	                        <td><input type="number" name="attr_utility_slot"></td>
-	                        <td><input type="number" name="attr_utility_weight"></td>
+	                        <td><input type="number" name="attr_utility_armor" value="0"></td>
+	                        <td><input type="number" name="attr_utility_defense" value="0"></td>
+	                        <td><input type="number" name="attr_utility_endurance" value="0"></td>
+	                        <td><input type="number" name="attr_utility_cover" value="0"></td>
+	                        <td><input type="number" name="attr_utility_front" value="0"></td>
+	                        <td><input type="number" name="attr_utility_slot" value="0"></td>
+	                        <td><input type="number" name="attr_utility_weight" value="0"></td>
 	                        <td><input class="variation" type="text" name="attr_utility_variation"></td>
 	                        <td><input class="cost" type="text" name="attr_utility_cost"></td>
 	                    </tr>
@@ -1040,6 +1809,68 @@
                     </table>
                 </fieldset>
 	        </div>
+	        
+	        <div class="equipement drone">
+                <table>
+                    <tr>
+                        <td style="width: 18%;"><h1>Drones</h1></td>
+                        <td style="width: 4%;"><h2>Hit</h2></td>
+                        <td style="width: 4%;"><h2>End Dmg</h2></td>
+                        <td style="width: 4%;"><h2>Crit Dmg</h2></td>
+                        <td style="width: 4%;"><h2>Range</h2></td>
+                        <td style="width: 4%;"><h2>Clips</h2></td>
+                        <td style="width: 4%;"><h2>Ammo</h2></td>
+                        <td style="width: 4%;"><h2>Load</h2></td>
+                        <td style="width: 4%;"><h2>RoF</h2></td>
+                        <td style="width: 4%;"><h2>Weight</h2></td>
+                        <td style="width: 22%;"><h2>Variations</h2></td>
+                        <td style="width: 6%;"><h2>Cost</h2></td>
+                    </tr>
+                </table>
+                <fieldset class="repeating_drone">
+                    <table>
+                        <tr>
+                            <td style="width: 18%;"><input class="name" type="text" name="attr_drone_name"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_hit"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_endurance"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_critical"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_range"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_clips_max"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_ammo_max"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_load"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_rof"></td>
+                            <td style="width: 4%;"><input class="number" type="text" name="attr_drone_weight"></td>
+                            <td style="width: 22%;"><input class="variation" type="text" name="attr_drone_variation"></td>
+                            <td style="width: 6%;"><input class="cost" type="text" name="attr_drone_cost"></td>
+                        </tr>
+                        <tr style="line-height: 2em;">
+                            <td colspan="12">
+                                <span>Defense:</span>
+                                <input class="drone-number" type="number" name="attr_drone_defence">
+                                <span>Armure:</span>
+                                <input class="drone-number" type="number" name="attr_drone_armor">
+                                <span>Mouvement:</span>
+                                <input class="drone-number" type="number" name="attr_drone_movement">
+                                <span>Emplacements:</span>
+                                <input class="drone-number" type="number" name="attr_drone_slots">
+                                <span>Corps:</span>
+                                <input class="drone-number" type="number" name="attr_drone_bodies">
+                                <div class="space"></div>
+                                <span>Corps Restants</span>
+                                <input class="rounded-number" type="number" name="attr_drone_bodies_current"><span style="margin-left: 3px; margin-right: 2px;">/</span>
+                                <input class="rounded-number" type="number" name="attr_drone_bodies_max" value="@{ordnance_bodies}" disabled="true">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="11"><input type="text" class="comment" name="attr_drone_comment"></td>
+                            <td>
+                                <input class="ammo" type="number" name="attr_drone_ammo_current"><span style="margin-left: 1px; margin-right: -1px;">/</span>
+                                <input class="ammo" type="number" name="attr_drone_clips_current">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
 	    </div>
 	    
 	    <div class="strong-hit">
@@ -1071,18 +1902,14 @@
                 <table>
                     <tr>
                         <td style="width: 2%;"><button type="roll" value="Description des coups puissants">w</button></td>
-                        <td style="width: 15%;"><input type="text" name="attr_strong-hit-skill_name"></td>
-                        <td style="width: 25%;"><input type="text" name="attr_strong-hit-skill_requirements"></td>
-                        <td style="width: 55%;"><input type="text" name="attr_strong-hit-skill_effect"></td>
+                        <td style="width: 15%;"><input type="text" name="attr_strong-hit-combat_name"></td>
+                        <td style="width: 25%;"><input type="text" name="attr_strong-hit-combat_requirements"></td>
+                        <td style="width: 55%;"><input type="text" name="attr_strong-hit-combat_effect"></td>
                     </tr>
                 </table>
             </fieldset>
 	    </div>
 	</div>
-    
-    <div class="note">
-        Notes
-    </div>
 </div>
 
 <script type="text/worker">
@@ -1092,6 +1919,20 @@
    			setAttrs({tab: attr});
    		});
    });
+   
+   [`player`, `npc`, `ship`, 'drone'].forEach(attr => {
+   		on(`clicked:sheet_${attr}`, () => {
+   			console.log(`c% The button clicked was sheet_${attr} update sheet to ${attr}`);
+   			setAttrs({sheet: attr});
+   		});
+   });
+   
+    /*on('change:repeating_weapon', () => {
+        getSectionIDs("repeating_???", function(idarray) {
+            _.each(idarray, function(itemid) {
+                
+        });
+    });*/
 </script>
 
 <rolltemplate class="sheet-rolltemplate-skill">
@@ -1118,18 +1959,66 @@
             {{#rollLess() modifier 0}}
             <div class="sheet-template-row">> Modifieur: {{modifier}}</div>
             {{/rollLess() modifier 0}}
-            
-            {{#tool}}
-            <div class="sheet-template-row">> {{tool-name}}: {{tool}}</div>
-            {{/tool}}
         </div>
         <div class="sheet-template-roll">
             {{roll}}
         </div>
-        {{#rollWasCrit() roll}}
-        <div class="sheet-template-hit">
-            Coups Puissants
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-action">
+    <div class="sheet-template-container">
+        <div class="sheet-template-header">{{action-name}}</div>
+    	<div class="sheet-template-bonuses">
+        	
+        	<!-- Déplacement -->
+        	{{#rollGreater() movement 0}}
+        	<div class="sheet-template-row">> Déplacement: {{movement}}</div>
+            {{/rollGreater() movement 0}}
+            {{#^rollGreater() movement 0}}
+        	<div class="sheet-template-row">> Déplacement: 0</div>
+            {{/^rollGreater() movement 0}}
+            
+            <!-- Récupération -->
+        	{{#rollGreater() recovery 0}}
+        	<div class="sheet-template-row">> Récupération: {{recovery}}</div>
+            {{/rollGreater() recovery 0}}
+            {{#^rollGreater() recovery 0}}
+        	<div class="sheet-template-row">> Récupération: 0</div>
+            {{/^rollGreater() recovery 0}}
+            
+            <!-- Toucher -->
+            {{#hit}}
+            <div class="sheet-template-row">> Toucher: {{hit}}</div>
+            {{/hit}}
+            
+            <!-- Cadence de Tir -->
+            {{#rof}}
+            <div class="sheet-template-row">> CdT: {{rof}}</div>
+            {{/rof}}
+            
+            <!-- Corps -->
+            {{#bodies}}
+            <div class="sheet-template-row">> Corps: {{bodies}}</div>
+            {{/bodies}}
+            
+            <!-- Portée -->
+        	{{#range}}
+        	<div class="sheet-template-row">> Portée: {{range}}</div>
+            {{/range}}
+            
+            <!-- Dégat Endurance -->
+        	{{#endurance}}
+        	<div class="sheet-template-row">> Dégât End.: {{endurance}}</div>
+            {{/endurance}}
+            
+            <!-- Dégat Critique -->
+        	{{#critical}}
+        	<div class="sheet-template-row">> Dégât Crit.: {{critical}}</div>
+            {{/critical}}
         </div>
-        {{/rollWasCrit() roll}}
+        <div class="sheet-template-roll">
+            {{d1}} + {{d2}} + {{d3}}
+        </div>
     </div>
 </rolltemplate>
