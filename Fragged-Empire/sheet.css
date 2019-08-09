@@ -699,7 +699,6 @@ button[type="roll"]:hover {
     text-align: center;
 }
 
-
 /*** PC-combat ***/
 /*** attribute ***/
 .sheet-combat .sheet-stats .sheet-col {
@@ -941,9 +940,64 @@ button[type="roll"]:hover {
     display: inline-block;
 }
 
+/** PC-actions **/
+
+.sheet-player .sheet-actions .sheet-col {
+    width: 33%;
+}
+
+.sheet-actions h1 {
+    background: black;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 1.5em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 96%;
+}
+
+.sheet-action {
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.sheet-action button {
+    border: 1px solid black;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 8px !important;
+    width: 22%;
+    height: 100%;
+    padding: 0px 3px 0px 5px !important;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0px !important;
+}
+
+.sheet-action .sheet-action-major {
+    font-size: 7px;
+    display: inline-block;
+    width: 19%;
+    vertical-align: middle;
+}
+
+.sheet-action .sheet-action-minor {
+    font-size: 7px;
+    display: inline-block;
+    width: 46%;
+    vertical-align: middle;
+}
+
+.sheet-action .sheet-action-border {
+    display: inline-block;
+    border-right: 1px solid black;
+    height: 100%;
+    vertical-align: middle;
+}
+
 /*** Roll Template ***/
-.sheet-rolltemplate-action .sheet-template-container,
-.sheet-rolltemplate-skill .sheet-template-container {
+.sheet-rolltemplate-action .sheet-template-containerr {
     background-color:#111111;
     border:4px solid #550000;
     color:#eebb99;
@@ -953,61 +1007,55 @@ button[type="roll"]:hover {
     margin-right:5%;
 }
 
-.sheet-rolltemplate-action .sheet-template-header,
-.sheet-rolltemplate-skill .sheet-template-header {
-    background-color:#444444;
+.sheet-rolltemplate-action .sheet-template-header {
+    background: white;
     text-align:center;
-    color:#eebb99;
-    font-size:2em;
-    width: 90%;
+    font-size:17px;
+    font-weight: bold;
+    width: 60%;
     padding: 8px;
-    border: 2px solid red;
+    border: 1px solid black;
+    border-radius: 20px 20px 0px 0px;
 }
 
 
-.sheet-rolltemplate-action .sheet-template-bonuses,
-.sheet-rolltemplate-skill .sheet-template-bonuses{
-    background-color:#111111;
-    width: 90%;
+.sheet-rolltemplate-action .sheet-template-bonuses{
+    background: white;
+    width: 60%;
     padding: 8px;
-    border: 2px solid red;
+    border: 1px solid black;
     border-top: none;
 }
 
-.sheet-rolltemplate-action .sheet-template-row,
-.sheet-rolltemplate-skill .sheet-template-row {
+.sheet-rolltemplate-action .sheet-template-row {
     text-align:left;
-    color:#eebb99;
-    font-size:1em;
+    font-size: 11px;
     width: 100%;
 }
 
-.sheet-rolltemplate-action .sheet-template-roll,
-.sheet-rolltemplate-skill .sheet-template-roll {
-    background-color:#444444;
+.sheet-rolltemplate-action .sheet-template-description {
+    background: white;
+    width: 60%;
+    padding: 8px;
+    border: 1px solid black;
+    border-top: none;
+    text-align:left;
+    font-size: 9px;
+}
+
+.sheet-rolltemplate-action .sheet-template-roll {
+    background: white;
     text-align:center;
-    color:#eebb99;
     font-size:2em;
-    width: 90%;
+    width: 60%;
     padding: 8px;
-    border: 2px solid red;
+    border: 1px solid black;
     border-top: none;
+    border-radius: 0px 0px 20px 20px;
+    line-height: 1em;
 }
 
-.sheet-rolltemplate-action .sheet-template-hit,
-.sheet-rolltemplate-skill .sheet-template-hit {
-    background-color:#444444;
-    text-align:center;
-    color:#eebb99;
-    font-size:1.5em;
-    width: 90%;
-    padding: 8px;
-    border: 2px solid red;
-    border-top: none;
-}
-
-.sheet-rolltemplate-action .inlinerollresult,
-.sheet-rolltemplate-skill .inlinerollresult {
+.sheet-rolltemplate-action .inlinerollresult {
     border: none;
     background: none;
 }
